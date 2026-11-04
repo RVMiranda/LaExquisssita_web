@@ -31,3 +31,9 @@ Menú y precios actuales, fotos autorizadas, historia/fundación, preparación a
 ## Confirmaciones futuras
 
 Registrar campo, valor, responsable, fecha y evidencia. Hasta entonces los datos comerciales encontrados en código son borradores.
+
+## Actualización confirmada — 4 de noviembre de 2026
+
+El usuario confirmó en este chat la propuesta, Astro y los datos comerciales: teléfono 919 673 2035 (WhatsApp +52 919 673 2035), Periférico Oriente Sur s/n, Barrio Aeropuerto, Ocosingo, Chiapas; lunes a sábado 08:00–16:00, domingo 08:00–15:00. Esto reemplaza el estado candidato/pendiente de esas filas históricas. No se confirmó el pin de Maps ni la propiedad del dominio.
+
+Añadió Quiénes somos y Nuestra historia al alcance. No proporcionó todavía el relato histórico; no inferir fundación, fundadores, generaciones ni técnicas de preparación.

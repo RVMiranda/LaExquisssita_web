@@ -19,9 +19,9 @@ H1 adaptable 36–64 px, cuerpo 18 px, auxiliar mínimo 14 px; lectura 55–70 c
 
 ## Composición
 
-Escritorio: cabecera ligera; hero con título/acciones a izquierda y foto real a derecha, mascota como bienvenida. Después foto de negocio/producto frente a dirección/horario. Finalmente club frente a captura pública de app.
+Escritorio: cabecera ligera; hero con título/acciones a izquierda y foto real a derecha, mascota como bienvenida. Después, bloque editorial Quiénes somos y Nuestra historia, sin línea temporal si no hay hitos confirmados; luego foto de negocio/producto frente a dirección/horario. Finalmente club frente a captura pública de app.
 
-Móvil: título, acción, foto, visita, app y pie. Orden DOM igual al visual, sin carruseles ni barras fijas que tapen contenido.
+Móvil: título, acción, foto o mascota, quiénes somos, historia, visita, app y pie. Orden DOM igual al visual, sin carruseles ni barras fijas que tapen contenido.
 
 Sin fotos: mascota de medio cuerpo en hero sobre vainilla. No usar comida generada como supuesta fotografía real del negocio.
 

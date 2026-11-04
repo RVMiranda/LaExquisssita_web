@@ -1,4 +1,4 @@
-# Propuesta v0.1
+# Propuesta v0.2 — aprobada como punto de partida el 4 de noviembre de 2026
 
 ## Idea rectora
 
@@ -16,10 +16,14 @@ Principal: **Consultar por WhatsApp**, sin prometer un pedido confirmado. Secund
 
 ## Alcance
 
-Una landing / con cabecera, bienvenida, dos secciones y pie:
+Una landing / con cabecera, bienvenida, cuatro secciones y pie:
 
-1. **Carnitas y visita**: presentación, fotografía, ubicación, horario y contacto.
-2. **Tu próxima visita, con la app**: novedades, tarjeta y vínculo con el negocio.
+1. **Quiénes somos**: identidad actual del negocio y relación con Ocosingo, sin atribuciones no comprobadas.
+2. **Nuestra historia**: origen y evolución reales. Relato pendiente del negocio; no inventar fechas, fundadores ni tradición familiar.
+3. **Carnitas y visita**: presentación, fotografía, ubicación, horario y contacto.
+4. **Tu próxima visita, con la app**: novedades, tarjeta y vínculo con el negocio.
+
+Quiénes somos e Historia pueden compartir una composición para mantener la página breve, con encabezados y contenido diferenciados.
 
 Páginas legales cuando haya textos aplicables. Fuera de MVP: comercio electrónico, pagos, delivery, reservas, login, saldo, QR personales, panel, menú sincronizado y promociones en tiempo real.
 
@@ -28,7 +32,7 @@ La web descubre y orienta sin instalación; la app cliente concentra tarjeta y n
 ## Entregas
 
 0. Contratos y marca: presente entrega.
-1. Confirmar contenido crítico e implementar versión responsive.
+1. Implementar versión responsive con los datos comerciales ya confirmados; recabar relato histórico y material pendiente.
 2. Revisar con cliente, integrar fotos y ajustes.
 3. Validar calidad y publicar en Cloudflare.
 

@@ -1,6 +1,8 @@
-# Continuidad desde Mac
+# Continuidad desde PC o Mac
 
-Fecha: 3 de noviembre de 2026. Contratos y marca preparados; implementación pendiente.
+Actualizado: 4 de noviembre de 2026. Astro, propuesta y datos comerciales confirmados. Añadidas Quiénes somos y Nuestra historia. Implementación pendiente en un chat independiente del proyecto web.
+
+En esta PC la carpeta ya existe: C:/Users/MACHENIKE/Projects/laexquisssita_web. Abrir esa carpeta como proyecto; no clonarla encima. Usar docs/10-prompt-inicio.md para iniciar el chat. Los comandos siguientes son para una máquina sin checkout, como la Mac.
 
     mkdir -p ~/Projects
     cd ~/Projects
@@ -13,8 +15,8 @@ Leer README, AGENTS y docs. Aún no hay comandos npm. Inicializar Astro posterio
 
 ## Próxima sesión
 
-1. Recibir feedback y confirmar datos comerciales.
-2. Confirmar Astro/diseño, preparar estructura y tokens.
+1. Leer contexto y estado Git; no volver a pedir confirmación de propuesta o datos comerciales.
+2. Preparar Astro, estructura y tokens; solicitar historia real sin bloquear el resto.
 3. Implementar bloques; mascota si faltan fotos.
 4. Integrar material aprobado y validar aceptación.
 5. Cloudflare cuando exista build; dominio después.
@@ -27,6 +29,6 @@ Ramas codex distintas y PR a main. Repartir archivos: contenido en docs/03-conte
 
 ## Preguntas para cliente
 
-Confirmar contacto, domicilio, horario y Maps; fotos autorizadas; historia real; productos; redes; ficha app; beneficios anunciables y propiedad de laexquisssita.com.
+Pendientes: pin Maps, fotos autorizadas, historia real (inicio, personas, origen y evolución), productos, redes, ficha app, beneficios anunciables y propiedad de laexquisssita.com. Contacto, domicilio y horario ya están confirmados.
 
 No hay proyecto Cloudflare creado, dominio enlazado, web publicada ni dependencias/build/pruebas de navegador. Las apps fueron revisadas como código, no ejecutadas.

@@ -1,6 +1,6 @@
 # Contrato de trabajo
 
-Leer README y docs. La fase actual es documental: implementar y desplegar en una siguiente fase solicitada por el usuario. Sus instrucciones prevalecen.
+Leer README y docs. La preparación documental está completada. La implementación comienza cuando el usuario pegue el prompt de docs/10-prompt-inicio.md o la solicite en el chat del proyecto web; ese encargo habilita implementar sin una confirmación adicional. Despliegue y DNS quedan fuera de esa primera implementación. Sus instrucciones prevalecen.
 
 ## Producto y fuentes
 

@@ -10,3 +10,7 @@ Fecha: 3 de noviembre de 2026.
 - No se creó despliegue Cloudflare ni se conectó dominio.
 
 Enlaces relativos Markdown comprobados sin destinos faltantes. git diff --cached --check completado sin errores. SVG maestros excluidos de normalización de saltos de línea para conservar hashes al clonar en Mac. Los criterios de implementación permanecen pendientes.
+
+## Revisión documental — 4 de noviembre de 2026
+
+Actualizados alcance, confirmaciones comerciales, diseño, aceptación y continuidad. Añadido prompt independiente de inicio. No se implementó ni desplegó aplicación. Verificados enlaces relativos Markdown sin destinos faltantes y git diff --check sin errores.

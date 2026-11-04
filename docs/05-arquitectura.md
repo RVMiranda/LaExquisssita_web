@@ -1,6 +1,6 @@
 # Arquitectura y Cloudflare
 
-ADR-001 propuesta: Astro estático + TypeScript + CSS propio + Cloudflare Pages. «Astra» se interpreta como Astro.
+ADR-001: Astro confirmado por el usuario el 4 de noviembre de 2026. Arquitectura recomendada: generación estática + TypeScript + CSS propio + Cloudflare Pages. No queda ambigüedad sobre «Astra».
 
 Contenido público y enlaces: no requiere React, servidor, cuentas, base de datos ni SDK del backend operativo.
 
@@ -44,7 +44,7 @@ Reservar dimensiones, AVIF/WebP cuando convenga, lazy load bajo primer viewport,
 
 Menú futuro requiere fuente editorial; no exponer inventario. Promociones dinámicas requieren contrato de vigencia, permisos, caché y actualización.
 
-## Fuentes consultadas el 3 de noviembre de 2026
+## Fuentes consultadas el 3 y revisadas el 4 de noviembre de 2026
 
 - [Astro y Cloudflare](https://docs.astro.build/en/guides/deploy/cloudflare/)
 - [Cloudflare Pages: Astro](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/)

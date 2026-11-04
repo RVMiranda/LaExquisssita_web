@@ -6,7 +6,7 @@ Propuesta respaldada por cliente/manager, supuestos separados, assets originales
 
 ## Primera implementación
 
-- Hero y dos secciones, sin ficción presentada como realidad.
+- Hero, Quiénes somos, Nuestra historia, Carnitas y visita y app, sin ficción presentada como realidad. Si falta relato histórico, registrar la sección como pendiente; no dar por completada la landing total.
 - Datos confirmados; probar WhatsApp, llamada, Maps y tienda si existe.
 - Semántica, una H1, alt útil o vacío si decorativo, foco y teclado.
 - Zoom 200 %; sin desbordes a 320, 390, 768 y 1440 px.
