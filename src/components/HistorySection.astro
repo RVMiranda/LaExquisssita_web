@@ -1,0 +1,30 @@
+---
+import type { EditorialText } from '../content/business';
+
+interface Props {
+  history: EditorialText;
+}
+
+const { history } = Astro.props;
+---
+
+{history.status === 'confirmed' ? (
+  <section class="history-section wrap" id="historia" aria-labelledby="history-title">
+    <div class="history-copy">
+      <p class="eyebrow">Una historia de familia</p>
+      <h2 id="history-title">{history.title}</h2>
+      <p class="history-story">{history.text}</p>
+    </div>
+    <span class="history-mark" aria-hidden="true">Desde 1998</span>
+  </section>
+) : import.meta.env.DEV ? (
+  <section class="history-section wrap" id="historia" aria-labelledby="history-title">
+    <div class="history-copy">
+      <p class="eyebrow">Relato editorial</p>
+      <h2 id="history-title">{history.title}</h2>
+      <p class="history-pending">Esta sección está en preparación para el equipo del negocio.</p>
+      <p class="history-note">{history.note}</p>
+    </div>
+    <span class="history-mark" aria-hidden="true">Desde Ocosingo</span>
+  </section>
+) : null}

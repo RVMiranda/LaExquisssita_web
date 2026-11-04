@@ -1,8 +1,12 @@
 # La Exquisssita — web
 
-Actualizado: 4 de noviembre de 2026. **Fase 0 documental completada**; propuesta y datos comerciales aprobados por el usuario. Implementación pendiente en el chat del proyecto web. No hay aplicación ejecutable, dependencias ni despliegue.
+Actualizado: 4 de noviembre de 2026. La landing local está implementada en `codex/landing-base`, con mapa de la ficha confirmada y una prueba tipográfica My Soul + Forum. Se mantienen pendientes la aprobación del borrador «Quiénes somos», fotos autorizadas, ficha pública de la app, redes, evaluación tipográfica final y propiedad del dominio. No se ha desplegado.
 
-Una bienvenida digital para conocer las carnitas del negocio en Ocosingo, planear la visita, consultar un pedido para llevar y descubrir su app.
+Una bienvenida digital para conocer las carnitas del negocio en Ocosingo, planear la visita, consultar un pedido para llevar y conocer la app.
+
+## Ejecución local
+
+Requiere Node `24.19.0` y npm 11. Instala dependencias con `npm ci`, inicia el servidor con `npm run dev`, ejecuta el chequeo con `npm run check` y genera el sitio estático con `npm run build`. Para pruebas Playwright, instala Chromium una vez con `npx playwright install chromium` y luego ejecuta `npm test` (usa el build existente y levanta un preview local). La salida es `dist/`.
 
 ## Documentación
 
@@ -16,7 +20,8 @@ Una bienvenida digital para conocer las carnitas del negocio en Ocosingo, planea
 8. [Continuidad PC/Mac](docs/08-handoff.md)
 9. [Validaciones](docs/09-validacion.md)
 10. [Prompt para el nuevo chat](docs/10-prompt-inicio.md)
+11. [Preview de revisión en Cloudflare Pages](docs/11-cloudflare-preview.md)
 
-Los contratos son acuerdos técnicos/editoriales, no documentos legales. Tecnología confirmada: Astro. Arquitectura recomendada: TypeScript, CSS propio y Cloudflare Pages. Se incorporan «Quiénes somos» y «Nuestra historia»; el relato histórico aún está pendiente.
+Los contratos son acuerdos técnicos/editoriales, no documentos legales. Tecnología confirmada: Astro estático. Se incorporan «Quiénes somos» y «Nuestra historia»; la historia ya cuenta con datos confirmados y la paráfrasis editorial quedó registrada en `docs/02-evidencia.md`.
 
-[Marca incluida](brand/README.md): maestros originales y PNG. No se concede licencia general sobre la identidad del negocio. Leer AGENTS.md antes de continuar. No ejecutar npm install: todavía no hay package.json.
+[Marca incluida](brand/README.md): maestros originales, PNG y un derivado WebP documentado. No se concede licencia general sobre la identidad del negocio. Leer AGENTS.md antes de continuar. Cloudflare Pages y DNS quedan sin configurar.

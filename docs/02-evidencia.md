@@ -24,16 +24,24 @@ Raíz Kotlin CLIENTE: app/src/main/java/com/mirandadevsource/laexquisssita/. MAN
 | Paleta distinta en Flutter | FLUTTER docs/design-system.md; MANAGER docs/migration-plan.md | Referencia histórica, no mezclar |
 | Contacto MirandaDevSource | CLIENTE features/profile/ui/SettingsScreen.kt | Del desarrollador, excluir de contacto comercial |
 
-## No comprobado
+## No comprobado al corte inicial
 
-Menú y precios actuales, fotos autorizadas, historia/fundación, preparación artesanal, delivery, testimonios, redes, ficha Play Store, iOS, dominio y horarios especiales. No se extrajeron clientes, ventas ni inventario real.
+Menú y precios actuales, fotos autorizadas, historia/fundación, preparación artesanal, delivery, testimonios, redes, ficha Play Store, iOS, dominio y horarios especiales. No se extrajeron clientes, ventas ni inventario real. La historia y los datos comerciales se actualizaron en las confirmaciones siguientes.
 
 ## Confirmaciones futuras
 
-Registrar campo, valor, responsable, fecha y evidencia. Hasta entonces los datos comerciales encontrados en código son borradores.
+Registrar campo, valor, responsable, fecha y evidencia. Los datos encontrados en código Android fueron históricos/candidatos hasta la confirmación del usuario registrada abajo.
 
 ## Actualización confirmada — 4 de noviembre de 2026
 
 El usuario confirmó en este chat la propuesta, Astro y los datos comerciales: teléfono 919 673 2035 (WhatsApp +52 919 673 2035), Periférico Oriente Sur s/n, Barrio Aeropuerto, Ocosingo, Chiapas; lunes a sábado 08:00–16:00, domingo 08:00–15:00. Esto reemplaza el estado candidato/pendiente de esas filas históricas. No se confirmó el pin de Maps ni la propiedad del dominio.
 
-Añadió Quiénes somos y Nuestra historia al alcance. No proporcionó todavía el relato histórico; no inferir fundación, fundadores, generaciones ni técnicas de preparación.
+Añadió Quiénes somos y Nuestra historia al alcance. En ese momento aún no se había compartido el relato; la confirmación que sigue reemplaza ese estado pendiente.
+
+## Confirmación de historia — 4 de noviembre de 2026
+
+El usuario compartió para publicación que La Exquisssita se fundó en 1998 por Valentín Miranda Martínez y Beatriz Silva Bailón; que ha permanecido en el mismo lugar; que el negocio se ha manejado en familia, siguiendo sus tradiciones; y que actualmente lo lleva su hijo Valentín Miranda, quien atiende junto a su esposa Roselia Cruz y cuida el legado de los fundadores. El texto de `src/content/business.ts` es una paráfrasis editorial fiel a esos datos, no una cita textual. No se añadió método de preparación ni antigüedad distinta a 1998.
+
+## Confirmación de ubicación — 4 de noviembre de 2026
+
+El usuario proporcionó el enlace de Maps `https://maps.app.goo.gl/wbjhmojxTzkYqQvd8?g_st=iw` para La Exquisssita. La ficha enlazada se identificó como «Carnitas estilo Michoacán la EXQUISSSITA», en Periférico Oriente Sur s/n, Barrio Aeropuerto, Ocosingo, Chiapas. Se validó el pin de la ficha y se obtuvo su iframe oficial de «Compartir > Incorporar un mapa»; el botón público abre el enlace del negocio en Google Maps y el bloque Visitarnos incluye ese mapa. La coordenada de la ficha corresponde al lugar del enlace, no a una geocodificación deducida de la dirección. No se confirmó propiedad del dominio.

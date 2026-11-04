@@ -1,0 +1,16 @@
+:root {
+  color-scheme: light;
+  --color-vanilla: #FAF3E0;
+  --color-coffee: #7E392F;
+  --color-chocolate: #3D2723;
+  --color-apricot: #E5C2A4;
+  --color-marigold: #B8860B;
+  --color-ochre: #A07324;
+  --color-paper: #FFFCF5;
+  --color-line: #D8C9AE;
+  --font-brand: 'My Soul', cursive;
+  --font-body: 'Forum', Georgia, serif;
+  --content-width: 1160px;
+  --gutter: clamp(20px, 5vw, 64px);
+  --space-section: clamp(76px, 10vw, 144px);
+}

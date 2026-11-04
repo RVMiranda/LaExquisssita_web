@@ -8,6 +8,7 @@ Selección por adecuación al alcance, no por una clasificación universal.
 | sites | Plugin instalado | Narrativa y alcance; hosting propio solicitado prevalece |
 | logo-design | Local | Conservación, tamaños y límites; sin rediseño |
 | frontend-design | Guía oficial Anthropic consultada | Composición, tipografía y revisión de propuesta |
+| apple-design | Skill local `C:\Users\MACHENIKE\.codex\skills\apple-design\SKILL.md` | Auditoría tipográfica y de interacción; foco, respuesta de controles y reduced motion |
 
 Guía externa leída, no instalada globalmente. Sin plugins/dependencias instalados en esta entrega.
 
@@ -23,4 +24,4 @@ Instalación opcional desde Mac:
 
 Elegir alcance local y agente; revisar licencia/archivos y registrar versión/commit. No instalar todo el paquete ni depender de rutas Windows.
 
-No se requieren skills React para Astro estático. No se generan logos/fotos. Apple-design puede evaluarse si aparecen interacciones que lo justifiquen. Los contratos permiten continuar sin copiar skills privadas entre máquinas.
+No se requieren skills React para Astro estático. No se generan logos/fotos. `apple-design` se aplicó a la revisión web del 4 de noviembre de 2026; las recomendaciones sobre gestos y movimiento físico no aplicaban a esta página informativa. Las skills privadas no se copian al repositorio.
