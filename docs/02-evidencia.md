@@ -1,0 +1,33 @@
+# Evidencia y procedencia
+
+Revisión local de código/documentación el 3 de noviembre de 2026. No se ejecutaron apps ni se consultó producción.
+
+CLIENTE: LaExquisssita, commit b4270b712b2f2af2b002414a71b8e5beea9b0a74, checkout limpio. MANAGER: ExquisssitaAppManager Android nativo, SHA no obtenido. FLUTTER: exquisssita_manager, referencia histórica.
+
+Raíz Kotlin CLIENTE: app/src/main/java/com/mirandadevsource/laexquisssita/. MANAGER: app/src/main/java/com/mirandadevsource/exquisssitaappmanager/.
+
+| Hallazgo | Fuente | Tratamiento |
+|---|---|---|
+| Carnitas y pedidos para llevar | CLIENTE features/home/ui/HomeScreen.kt, WhatsAppContactBanner | Base de propuesta, confirmar vigencia |
+| WhatsApp 529196732035; llamada 9196732035 | Mismo archivo | Contacto candidato |
+| Periférico Oriente Sur s/n, Barrio Aeropuerto, Ocosingo, Chiapas | Mismo archivo, sucursal | Confirmar y obtener pin |
+| Lunes a sábado 08:00–16:00; domingo 08:00–15:00 | Mismo archivo, horario | Confirmar antes de publicar |
+| laexquisssita.com | Mismo archivo, WebsiteBannerCard | Intención de dominio, no propiedad comprobada |
+| Novedades, QR, puntos y recompensas | CLIENTE docs/ARCHITECTURE.md y features/loyalty/ui/LoyaltyScreen.kt | Explicar club sin cifras ni promesas específicas |
+| Política semestral de recompensas en UI | CLIENTE LoyaltyScreen.kt | No convertir en campaña sin revisión |
+| Registro de visitas por QR | MANAGER domain/usecases/loyalty/RegisterCustomerVisitUseCase.kt | Operación permanece en caja |
+| Producto con precio en centavos, categoría e inventario | MANAGER domain/entity/Product.kt | Modelo no equivale a menú autorizado |
+| Promoción con términos, fechas y estado | MANAGER domain/entity/Promotion.kt | No copiar campañas sin validar vigencia |
+| Paleta vainilla, café rojizo, chocolate, albaricoque | MANAGER ui/theme/Color.kt; CLIENTE docs/ARCHITECTURE.md | Identidad actual |
+| Familia tipográfica de sistema | CLIENTE ui/theme/Type.kt | Fuente web será propuesta nueva |
+| Mascotas aprobadas y maestros | CLIENTE branding/la-exquisssita/README.md | Reutilizar sin rediseño |
+| Paleta distinta en Flutter | FLUTTER docs/design-system.md; MANAGER docs/migration-plan.md | Referencia histórica, no mezclar |
+| Contacto MirandaDevSource | CLIENTE features/profile/ui/SettingsScreen.kt | Del desarrollador, excluir de contacto comercial |
+
+## No comprobado
+
+Menú y precios actuales, fotos autorizadas, historia/fundación, preparación artesanal, delivery, testimonios, redes, ficha Play Store, iOS, dominio y horarios especiales. No se extrajeron clientes, ventas ni inventario real.
+
+## Confirmaciones futuras
+
+Registrar campo, valor, responsable, fecha y evidencia. Hasta entonces los datos comerciales encontrados en código son borradores.

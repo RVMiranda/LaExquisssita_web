@@ -1,0 +1,50 @@
+[
+  {
+    "path": "brand/masters/medio_cuerpo_monocromo.svg",
+    "source": "masters/medio_cuerpo_monocromo.svg",
+    "bytes": 103779,
+    "sha256": "B4363DA61A083F3DBF9FE8F32BD6F06C6B932F0DFA86AB87C3B6AF7B2F65CC4D"
+  },
+  {
+    "path": "brand/masters/busto_monocromo.svg",
+    "source": "masters/busto_monocromo.svg",
+    "bytes": 74028,
+    "sha256": "19751AF5879F018C59ACEE0384906D4709800A40B9653E74A131D003D5D44024"
+  },
+  {
+    "path": "public/brand/busto_2048.png",
+    "source": "exports/busto_2048.png",
+    "bytes": 217777,
+    "sha256": "7395CFD778DB65AF3D3FC0F9BDF8297DF2F40C7623B0BD4A17CE2EF7D9E3A06C"
+  },
+  {
+    "path": "brand/references/busto_aprobado.png",
+    "source": "references/busto_aprobado.png",
+    "bytes": 1383569,
+    "sha256": "7D3ED19D4EE548EB069460C1334E15510C53596EE50C29B61D5E4A0F7BFC22E3"
+  },
+  {
+    "path": "public/brand/medio_cuerpo_2048.png",
+    "source": "exports/medio_cuerpo_2048.png",
+    "bytes": 253726,
+    "sha256": "BCCF4631132E61794A81A053652A7B9380A9B0DAFA4D74146DDCE514347327E2"
+  },
+  {
+    "path": "brand/references/medio_cuerpo_aprobado.png",
+    "source": "references/medio_cuerpo_aprobado.png",
+    "bytes": 1380959,
+    "sha256": "5687F1E8225FE0D8F494F5F7D5872F0D42D8C1D5D449D2FB6E7CBEDFEE29B5DB"
+  },
+  {
+    "path": "brand/masters/busto.svg",
+    "source": "masters/busto.svg",
+    "bytes": 73053,
+    "sha256": "09570B331F56F22349E7E62AF1560C5C7124561DBE15051DC232E11C043B1177"
+  },
+  {
+    "path": "brand/masters/medio_cuerpo.svg",
+    "source": "masters/medio_cuerpo.svg",
+    "bytes": 97030,
+    "sha256": "2CF61592E3B883E436F6A4551EBE483C1D742DA66081C62F917FCC3ACB683AEB"
+  }
+]
