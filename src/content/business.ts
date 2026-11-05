@@ -30,7 +30,7 @@ export const business = {
     href: 'tel:+529196732035',
   },
   whatsapp: {
-    href: 'https://wa.me/529196732035?text=Hola%2C%20quisiera%20consultar%20un%20pedido%20para%20llevar%20en%20La%20Exquisssita',
+    href: 'https://wa.me/529191330424?text=Hola%2C%20quisiera%20consultar%20un%20pedido%20para%20llevar%20en%20La%20Exquisssita',
     message: 'Hola, quisiera consultar un pedido para llevar en La Exquisssita',
   },
   maps: {
@@ -45,13 +45,13 @@ export const business = {
   ],
   about: {
     title: 'Quiénes somos',
-    text: 'Somos La Exquisssita, un negocio de carnitas en Ocosingo. Puedes visitarnos o escribirnos para consultar tu pedido para llevar.',
+    text: 'Somos Carnitas al estilo Michoacán La Exquisssita, una taquería fundada en Ocosingo y pioneros en la venta de carnitas. Además de nuestros exquisssitos tacos, ofrecemos otros productos derivados del cerdo, como chicharrón y chorizo. Nuestro negocio se distingue por ofrecer productos de alta calidad y un servicio excepcional, manteniendo siempre nuestras tradiciones y valores, siempre con el objetivo de satisfacer a nuestros clientes con el mejor sabor posible.',
     status: 'draft',
-    note: 'Borrador editorial basado solo en carnitas, Ocosingo y pedidos para llevar. Falta aprobación del negocio.',
+    note: 'Borrador formal, pendiente de la aprobacion del cliente.',
   },
   history: {
-    title: 'Nuestra historia',
-    text: 'En 1998, don Valentín Miranda Martínez y doña Beatriz Silva Bailón fundaron La Exquisssita en este mismo lugar de Ocosingo. Desde entonces, el negocio ha seguido adelante en familia, conservando sus tradiciones. Hoy lo lleva su hijo, don Valentín Miranda, quien atiende personalmente junto a su esposa, Roselia Cruz. Con cariño y respeto, continúan el legado de quienes lo iniciaron.',
+    title: 'Un pedazo de historia',
+    text: 'En 1998, don Valentín Miranda Martínez y doña Beatriz Silva Bailón fundaron La Exquisssita, con el objetivo de ofrecer a la comunidad el mejor sabor de carnitas al estilo Michoacán. Desde entonces, el negocio ha seguido adelante en familia, conservando sus tradiciones y convirtiendose en un referente de la gastronomía local. Hoy lo lleva su hijo, don Valentín Miranda, quien atiende personalmente junto a su esposa, Roselia Cruz. Con cariño y respeto, continúan el legado de quienes lo iniciaron. ',
     status: 'confirmed',
     note: 'Relato redactado a partir de la información compartida por el usuario responsable del proyecto el 4 de noviembre de 2026.',
   },
