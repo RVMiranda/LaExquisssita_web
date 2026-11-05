@@ -1,0 +1,21 @@
+---
+import { business } from '../content/business';
+---
+
+<header class="site-header">
+  <div class="header-inner wrap">
+    <a class="wordmark" href="#inicio" aria-label={`${business.name}, inicio`}>
+      <span class="wordmark-flower" aria-hidden="true"></span>
+      <span>{business.name}</span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#visita">Visítanos</a>
+      <a href="#app">Nuestra app</a>
+    </nav>
+    <a class="header-contact" href={business.whatsapp.href} target="_blank" rel="noreferrer">
+      Escríbenos
+      <span aria-hidden="true">↗</span>
+    </a>
+  </div>
+</header>

@@ -6,13 +6,16 @@ Propuesta respaldada por cliente/manager, supuestos separados, assets originales
 
 ## Primera implementación
 
-- Hero, Quiénes somos, Nuestra historia, Carnitas y visita y app, sin ficción presentada como realidad. Si falta relato histórico, registrar la sección como pendiente; no dar por completada la landing total.
-- Datos confirmados; probar WhatsApp, llamada, Maps y tienda si existe.
+- Hero, Quiénes somos, Nuestra historia, Carnitas y visita y app, sin ficción presentada como realidad. La historia tiene datos confirmados; la landing aún requiere revisión de copy y materiales pendientes.
+- Datos confirmados; probar WhatsApp, llamada y Maps. No existe enlace público confirmado de la tienda.
+- En Visítanos, el pin de Maps confirmado abre en una pestaña nueva y el mapa corresponde al mismo lugar; documentar que depende de Google Maps externo.
+- La vista conceptual de app identifica sus elementos y medidas aproximadas, y no se presenta como captura real.
 - Semántica, una H1, alt útil o vacío si decorativo, foco y teclado.
 - Zoom 200 %; sin desbordes a 320, 390, 768 y 1440 px.
 - Contraste objetivo AA: 4.5:1 texto normal, 3:1 texto grande y controles relevantes.
 - Reduced motion; ningún dato interno o QR personal.
 - npm ci, chequeo de tipos y build con lockfile.
+- Playwright: una H1, datos y destinos de enlaces, medidas mínimas del mapa y vista app, ajuste a 320/390/768/1440 px, foco por teclado y movimiento reducido.
 - Revisión Safari Mac, Chromium y vista móvil.
 - Objetivos de campo: LCP <= 2.5 s, CLS <= 0.1, INP <= 200 ms.
 - Lighthouse móvil >= 90 rendimiento/accesibilidad como señal de laboratorio, no garantía.

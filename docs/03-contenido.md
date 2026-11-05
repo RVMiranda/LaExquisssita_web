@@ -31,18 +31,26 @@ Confirmación: usuario responsable del proyecto en el chat de preparación.
 
 WhatsApp: https://wa.me/529196732035. Mensaje codificado para URL: «Hola, quisiera consultar un pedido para llevar en La Exquisssita».
 Llamada: tel:+529196732035.
-Maps: pin exacto pendiente, no deducir coordenadas.
+Maps: ficha confirmada por el usuario el 4 de noviembre de 2026: https://maps.app.goo.gl/wbjhmojxTzkYqQvd8. Se usa como destino del botón «Abrir ubicación en Google Maps» y como la ficha del mapa incrustado. Procedencia y validación en `docs/02-evidencia.md`.
 App: no fabricar URL con applicationId. Sin ficha, omitir descarga y explicar club sin prometer disponibilidad. Wallet y deep links no confirmados.
 
 ## Material pendiente
 
-Antes de publicar: pin de Maps si se ofrece Cómo llegar, aprobación de copy y derechos de las fotos utilizadas. Teléfono, dirección y horario ya confirmados.
+Antes de publicar: aprobación del copy y derechos de las fotos utilizadas. Teléfono, dirección, horario y ficha de Maps ya confirmados.
 Antes de enlazar app: ficha pública y beneficios anunciables.
 Antes de dominio: propiedad y acceso Cloudflare/DNS.
 Para enriquecer: 3–5 fotos de comida servida, fachada y ambiente; historia real, menú y redes.
 
 Primera versión sin formularios. No trasladar automáticamente el aviso legal de la app a la web.
 
-## Historia sin información definitiva
+## Historia y estado editorial
 
-Solicitar fecha o etapa de inicio, quién impulsó el negocio, motivo de origen y dos o tres momentos relevantes. La ausencia de estos datos no bloquea maquetación ni otras secciones. Preparar componente y modelo editorial; mostrar pendiente solo en desarrollo y omitir del build público hasta aprobar un relato real. La sección seguirá pendiente de aceptación, aunque el resto sea funcional. No publicar «próximamente» o texto ficticio para simular historia terminada.
+El 4 de noviembre de 2026, el usuario confirmó para publicación el inicio en 1998, sus fundadores, la continuidad en el mismo lugar, el manejo familiar y quién lleva el negocio actualmente. El modelo mantiene estado editorial `confirmed` y registra la procedencia. La redacción es una paráfrasis revisable. Si se cambia a `draft`, el componente muestra el estado solo en desarrollo y omite la sección del build público. No añadir cronología ni técnicas de preparación sin evidencia.
+
+Quiénes somos permanece como borrador editorial (`draft`) basado solo en carnitas, Ocosingo y consulta de pedidos para llevar; requiere aprobación del negocio.
+
+## Implementación — 4 de noviembre de 2026
+
+La sección de visita ahora muestra dirección, horarios, llamada, mapa incrustado de la ficha confirmada y enlace «Abrir ubicación en Google Maps». El WhatsApp permanece en la bienvenida. La muestra conceptual de app presenta cabecera, tarjeta digital y novedades; su marco tiene hasta 350 px de ancho y la pantalla al menos 480 px de alto. Es una composición de referencia, no una medición ni captura de la app real.
+
+Tipografía en evaluación con el cliente: My Soul para nombre y encabezados; Forum para el resto del contenido. El contrato original se conserva como histórico; la implementación y su revisión visual están registradas en `docs/09-validacion.md`.

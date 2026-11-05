@@ -12,3 +12,5 @@ Thumbs.db
 *.log
 *.keystore
 *.jks
+playwright-report/
+test-results/

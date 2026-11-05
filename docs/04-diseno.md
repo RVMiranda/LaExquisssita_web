@@ -13,7 +13,7 @@ Dirección: **una mesa abierta en Ocosingo**. Comida para despertar apetito, mas
 
 No usar dorado/albaricoque para texto pequeño sin medir contraste. No se certifica contraste en esta fase.
 
-Tipografía propuesta: evaluar Source Sans 3, pesos 400/600/700, fallback system-ui. No es una fuente corporativa confirmada. Verificar licencia y alojar WOFF2 localmente al implementar. La mascota aporta gesto: no añadir serif decorativa por defecto.
+Tipografía inicial propuesta: evaluar Source Sans 3, pesos 400/600/700, fallback system-ui. El 4 de noviembre de 2026 el cliente pidió probar My Soul para el nombre de marca y los encabezados, y Forum para el contenido restante. Esa combinación se integra como prueba de diseño, no como tipografía corporativa aprobada. Las fuentes se cargan desde Google Fonts; se requiere conexión para recibirlas y pueden aparecer los fallbacks si el proveedor no responde. La mascota y las fuentes dan el gesto editorial; revisar legibilidad antes de dar por aprobada la combinación.
 
 H1 adaptable 36–64 px, cuerpo 18 px, auxiliar mínimo 14 px; lectura 55–70 caracteres. Contenedor máximo 1160 px, márgenes móviles 20 px, espaciado 4/8 px. Radios 12 px en botones y 20 px en fotografía cuando convenga. Evitar convertir cada bloque en tarjeta.
 
@@ -36,3 +36,9 @@ Mascota protagonista una vez y discreta como identificador. Capturas con cuenta 
 Foco visible, teclado, enlaces descriptivos, targets objetivo 48 px, zoom 200 %, prefers-reduced-motion. Feedback breve; sin autoplay, parallax, scroll hijacking ni vidrio decorativo.
 
 La paleta se conserva por evidencia, no por tendencia. La singularidad vendrá de mascota, fotos propias y contenido local. Revisar si el resultado sigue siendo reconocible al ocultar el nombre.
+
+## Prueba tipográfica e interacción — 4 de noviembre de 2026
+
+My Soul se aplica al nombre y a H1/H2; Forum al texto, navegación, acciones y datos prácticos. La sección de app muestra una composición conceptual con cabecera, tarjeta y novedades. La prueba sigue abierta a evaluación del cliente. Se aplicaron los criterios pertinentes de la skill `apple-design`: escala tipográfica y legibilidad, realimentación discreta en controles, foco visible y respeto de `prefers-reduced-motion`. No se añadieron gestos ni animaciones de movimiento a esta página informativa.
+
+Visita usa la ficha de Google Maps entregada por el cliente; el mapa es un iframe externo y depende de la disponibilidad de Google Maps y conexión del visitante. Se omite la ficha de tienda al no haber URL confirmada.

@@ -46,5 +46,15 @@
     "source": "masters/medio_cuerpo.svg",
     "bytes": 97030,
     "sha256": "2CF61592E3B883E436F6A4551EBE483C1D742DA66081C62F917FCC3ACB683AEB"
+  },
+  {
+    "path": "public/brand/mascota-bienvenida.webp",
+    "source": "public/brand/medio_cuerpo_2048.png",
+    "width": 1120,
+    "height": 1120,
+    "format": "WebP",
+    "quality": 84,
+    "bytes": 62464,
+    "sha256": "EF64628A4BBA59988CC4C6E7E90C37FB97364FD3F5ECA6FD05479A8ACD08A060"
   }
 ]

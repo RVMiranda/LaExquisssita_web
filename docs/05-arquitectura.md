@@ -4,7 +4,7 @@ ADR-001: Astro confirmado por el usuario el 4 de noviembre de 2026. Arquitectura
 
 Contenido público y enlaces: no requiere React, servidor, cuentas, base de datos ni SDK del backend operativo.
 
-## Estructura futura
+## Estructura implementada
 
 - src/pages/index.astro
 - src/layouts/BaseLayout.astro
@@ -16,11 +16,11 @@ Contenido público y enlaces: no requiere React, servidor, cuentas, base de dato
 - brand/masters/ para originales no publicados
 - docs/
 
-No está implementada y no hay package.json.
+La primera versión está implementada en Astro estático. El contenido editorial vive fuera de los componentes y las notas internas no se publican.
 
-## Arranque posterior
+## Implementación inicial
 
-Elegir Astro estable y Node compatible con documentación vigente. Fijar Node en .nvmrc/engines, npm y único package-lock.json. TypeScript estricto; scripts dev, check, build y preview.
+Astro `7.4.5`, Node `24.19.0` y npm `11` fijados en package.json/`.nvmrc` con lockfile. TypeScript estricto; scripts dev, check, build y preview. Versiones consultadas el 4 de noviembre de 2026 en documentación oficial de Astro y paquetes publicados. Astro requiere Node `22.23.4` o superior; Node 24 es LTS. Sin adaptador Cloudflare porque la salida es enteramente estática.
 
 Salida estática dist; sin adaptador Cloudflare por defecto. Si se introduce renderizado bajo demanda, revisar guía vigente y documentar Workers/adaptador.
 
@@ -48,5 +48,14 @@ Menú futuro requiere fuente editorial; no exponer inventario. Promociones diná
 
 - [Astro y Cloudflare](https://docs.astro.build/en/guides/deploy/cloudflare/)
 - [Cloudflare Pages: Astro](https://developers.cloudflare.com/pages/framework-guides/deploy-an-astro-site/)
+- [Instalación y requisitos actuales de Astro](https://docs.astro.build/en/install-and-setup/)
+- [Versiones mantenidas de Node.js](https://nodejs.org/en/about/previous-releases)
+- [Configuración de build de Cloudflare Pages](https://developers.cloudflare.com/pages/configuration/build-configuration/)
 
-Revisar compatibilidad al implementar.
+Implementación inicial: Astro 7.4.5, `@astrojs/check` 0.9.12, TypeScript 5.9.3, Node 24.19.0 y npm 11.17.0; lockfile único `package-lock.json`. Astro requiere Node 22.23.4 o superior. El build conserva salida estática `dist`; Pages prescribe `npm run build` y `dist`. No se usa adaptador ni se configuró despliegue.
+
+## Revisión funcional — 4 de noviembre de 2026
+
+La página utiliza un iframe de Google Maps obtenido desde la acción de compartir/incorporar de la ficha proporcionada por el cliente; el botón abre el enlace corto de esa ficha. Es contenido remoto, sin SDK, proxy ni credenciales propios. Se añade Playwright Test 1.64.1 como dependencia de desarrollo para verificar estructura, destinos de enlaces, layout responsive y accesibilidad básica. `npm test` lanza el preview estático en el puerto local 4331; requiere generar `dist/` antes y descargar Chromium con `npx playwright install chromium` en una máquina nueva.
+
+La combinación tipográfica temporal My Soul + Forum se solicita desde Google Fonts. La composición de app es HTML/CSS ilustrativo, no importa estado ni captura de Android.
