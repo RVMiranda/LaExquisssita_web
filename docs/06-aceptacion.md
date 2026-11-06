@@ -10,12 +10,16 @@ Propuesta respaldada por cliente/manager, supuestos separados, assets originales
 - Datos confirmados; probar WhatsApp, llamada y Maps. No existe enlace público confirmado de la tienda.
 - En Visítanos, el pin de Maps confirmado abre en una pestaña nueva y el mapa corresponde al mismo lugar; documentar que depende de Google Maps externo.
 - La vista conceptual de app identifica sus elementos y medidas aproximadas, y no se presenta como captura real.
+- Menú fiel a la lista confirmada, sin precios inventados ni carrito; sus categorías operan por teclado y se ajustan a móvil.
+- Diferenciar teléfono fijo `919 673 2035` de WhatsApp `+52 919 133 0424`.
+- Toda fotografía de stock debe tener licencia y fuente; las fotos de alimentos del local deben ser autorizadas por el cliente.
 - Semántica, una H1, alt útil o vacío si decorativo, foco y teclado.
 - Zoom 200 %; sin desbordes a 320, 390, 768 y 1440 px.
 - Contraste objetivo AA: 4.5:1 texto normal, 3:1 texto grande y controles relevantes.
 - Reduced motion; ningún dato interno o QR personal.
 - npm ci, chequeo de tipos y build con lockfile.
 - Playwright: una H1, datos y destinos de enlaces, medidas mínimas del mapa y vista app, ajuste a 320/390/768/1440 px, foco por teclado y movimiento reducido.
+- Playwright: menú actual, grupos, medidas de porción e interacción de los disclosures.
 - Revisión Safari Mac, Chromium y vista móvil.
 - Objetivos de campo: LCP <= 2.5 s, CLS <= 0.1, INP <= 200 ms.
 - Lighthouse móvil >= 90 rendimiento/accesibilidad como señal de laboratorio, no garantía.

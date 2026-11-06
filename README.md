@@ -1,6 +1,6 @@
 # La Exquisssita — web
 
-Actualizado: 4 de noviembre de 2026. La landing local está implementada en `codex/landing-base`, con mapa de la ficha confirmada y una prueba tipográfica My Soul + Forum. Se mantienen pendientes la aprobación del borrador «Quiénes somos», fotos autorizadas, ficha pública de la app, redes, evaluación tipográfica final y propiedad del dominio. No se ha desplegado.
+Actualizado: 6 de noviembre de 2026. La landing y el menú interactivo están en la rama `dev` para revisión. Se mantienen pendientes las fotos autorizadas de alimentos, ficha pública de la app, redes, evaluación tipográfica final y propiedad del dominio. No se ha desplegado.
 
 Una bienvenida digital para conocer las carnitas del negocio en Ocosingo, planear la visita, consultar un pedido para llevar y conocer la app.
 

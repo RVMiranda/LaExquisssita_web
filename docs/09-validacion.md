@@ -34,3 +34,11 @@ Actualizados alcance, confirmaciones comerciales, diseño, aceptación y continu
 - `npm test`: 9 pruebas Playwright aprobadas en Chromium sobre el build servido por preview. Revisaron contenido/destinos del teléfono y WhatsApp, la ficha/iframe de Maps, tipografías y elementos del concepto app, anchos 320/390/768/1440 px sin overflow horizontal, foco por teclado y reduced motion.
 - Inspección visual de capturas desktop y móvil en Chromium. Jerarquía, composición, tipografía seleccionada y comportamiento responsive visibles. En la captura de página completa, el iframe lazy del mapa aparece en blanco porque la captura no desplazó la página hasta él; la prueba valida tamaño y origen del iframe, pero no la carga de contenido de Google. En navegador conectado, la disponibilidad del mapa depende del tercero. No se registraron métricas Lighthouse ni revisión de Safari.
 - Preview local y procesos de desarrollo no son un despliegue. No se publicó en Cloudflare, no se modificó DNS ni se hizo push a main.
+
+## Menú y revisión — 6 de noviembre de 2026
+
+- `npm run check`: 0 errores, 0 warnings, 0 hints (12 archivos).
+- `npm run build`: completado; genera `/` estático en `dist/`.
+- `npm test`: 10 pruebas Playwright aprobadas en Chromium. Incluye el nuevo menú, cambio exclusivo de categoría con Enter, cortes y presentaciones, foto ilustrativa y atribución, WhatsApp +52 919 133 0424 separado de la línea fija, Maps, y ajuste a 320/390/768/1440 px sin overflow, foco visible y reduced motion.
+- Inspección visual con Chromium a 1440 y 390 px; se abrió la categoría Bebidas y se revisó el recorte 4:3 de la foto. Sin fotos reales de alimentos aún. La carga del contenido remoto de Google Maps no se valida desde el build local; su iframe, origen y caja ya se comprueban.
+- No desplegado en Cloudflare. Cambios preparados en `dev`; mantener fuera de `main` hasta la aprobación del cliente.

@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import HistorySection from '../components/HistorySection.astro';
 import LocationMap from '../components/LocationMap.astro';
+import MenuSection from '../components/MenuSection.astro';
 import { business } from '../content/business';
 ---
 
@@ -53,6 +54,8 @@ import { business } from '../content/business';
     </section>
 
     <HistorySection history={business.history} />
+
+    <MenuSection />
 
     <section class="visit-section" id="visita" aria-labelledby="visit-title">
       <div class="visit-inner wrap">

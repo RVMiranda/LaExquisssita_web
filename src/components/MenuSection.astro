@@ -1,0 +1,59 @@
+---
+import { business } from '../content/business';
+import { menuCategories } from '../content/menu';
+---
+
+<section class="menu-section" id="menu" aria-labelledby="menu-title">
+  <div class="menu-inner wrap">
+    <header class="menu-heading">
+      <div>
+        <p class="eyebrow">De nuestra cocina y mostrador</p>
+        <h2 id="menu-title">El menú<span class="title-period">.</span></h2>
+      </div>
+      <p>Explora por categoría y descubre qué se te antoja. No mostramos precios porque pueden variar; consúltalos directamente con el negocio.</p>
+    </header>
+
+    <div class="menu-accordion" aria-label="Categorías del menú">
+      {menuCategories.map((category, index) => (
+        <details class="menu-category" name="menu-categories" open={index === 0}>
+          <summary class="menu-summary">
+            <span class="menu-index" aria-hidden="true">0{index + 1}</span>
+            <h3>{category.title}</h3>
+            <span class="menu-toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="menu-panel">
+            <p class="menu-description">{category.description}</p>
+            <div class:list={['menu-panel-content', { 'menu-panel-content-with-image': category.image }]}>
+              {category.image && (
+                <figure class="menu-photo">
+                  <img src={category.image.src} alt={category.image.alt} width="1200" height="800" loading="lazy" decoding="async" />
+                  <figcaption>
+                    Imagen ilustrativa, no es una foto del local. <a href={category.image.source} target="_blank" rel="noreferrer">{category.image.credit}</a>
+                  </figcaption>
+                </figure>
+              )}
+              <div class="menu-groups">
+                {category.groups.map((group) => (
+                  <article class="menu-group">
+                    <h4>{group.title}</h4>
+                    <ul>
+                      {group.items.map((item) => <li>{item}</li>)}
+                    </ul>
+                    {group.note && <p class="menu-note">{group.note}</p>}
+                  </article>
+                ))}
+              </div>
+            </div>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="menu-contact">
+      <p>¿Quieres consultar un precio o hacer una pregunta?</p>
+      <a class="text-link" href={business.whatsapp.href} target="_blank" rel="noreferrer">
+        Escríbenos por WhatsApp <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
