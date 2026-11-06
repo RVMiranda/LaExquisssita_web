@@ -42,3 +42,14 @@ Actualizados alcance, confirmaciones comerciales, diseño, aceptación y continu
 - `npm test`: 10 pruebas Playwright aprobadas en Chromium. Incluye el nuevo menú, cambio exclusivo de categoría con Enter, cortes y presentaciones, foto ilustrativa y atribución, WhatsApp +52 919 133 0424 separado de la línea fija, Maps, y ajuste a 320/390/768/1440 px sin overflow, foco visible y reduced motion.
 - Inspección visual con Chromium a 1440 y 390 px; se abrió la categoría Bebidas y se revisó el recorte 4:3 de la foto. Sin fotos reales de alimentos aún. La carga del contenido remoto de Google Maps no se valida desde el build local; su iframe, origen y caja ya se comprueban.
 - No desplegado en Cloudflare. Cambios preparados en `dev`; mantener fuera de `main` hasta la aprobación del cliente.
+
+## Confirmación de cuenta — 6 de noviembre de 2026
+
+- `npm run check`: 0 errores, warnings y hints en 13 archivos.
+- `npm run build`: completado; genera `/` y `/verificar-tu-cuenta-socio-laexquisssita/` como páginas estáticas.
+- `npm test`: 11 pruebas Playwright aprobadas en Chromium; añade confirmación accesible, noindex, enlace de retorno, ancho móvil 360 px y reduced motion. Se ejecutó fuera del aislamiento para permitir que el navegador accediera al preview local.
+- Inspección visual mediante capturas Playwright en 390 × 844 y 1440 × 900, una vez terminada la animación. Revisados composición, contraste, legibilidad móvil y estado final del check.
+- Añadida la ruta estática `/verificar-tu-cuenta-socio-laexquisssita/`, `noindex, nofollow`, sin JavaScript ni conexión a Supabase. La animación breve del check y entrada de la tarjeta respeta `prefers-reduced-motion`.
+- El copy resume tarjeta de socio, visitas/puntos y novedades/recompensas, contrastado con la app Android. No se presentan promociones específicas ni acceso automático como hechos.
+- La app Android actual no especifica `redirectTo` en el registro. La ruta necesita URL pública y allow-list/configuración en Supabase; ese redirect no se configuró ni probó con correo real. La página solo presenta el éxito posterior a la verificación y no valida token, sesión o errores de autenticación.
+- No se cambió Supabase, Android ni manager y no hubo despliegue.

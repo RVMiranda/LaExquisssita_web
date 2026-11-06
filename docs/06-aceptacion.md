@@ -11,6 +11,8 @@ Propuesta respaldada por cliente/manager, supuestos separados, assets originales
 - En Visítanos, el pin de Maps confirmado abre en una pestaña nueva y el mapa corresponde al mismo lugar; documentar que depende de Google Maps externo.
 - La vista conceptual de app identifica sus elementos y medidas aproximadas, y no se presenta como captura real.
 - Menú fiel a la lista confirmada, sin precios inventados ni carrito; sus categorías operan por teclado y se ajustan a móvil.
+- Ruta `/verificar-tu-cuenta-socio-laexquisssita/` estática, no indexable, con confirmación de cuenta y beneficios que coinciden con la app; animación breve con soporte de movimiento reducido y layout móvil sin overflow.
+- Configurar y probar la URL posterior a la confirmación en Supabase. La página presupone que Supabase terminó la verificación; no valida tokens ni autentica usuarios.
 - Diferenciar teléfono fijo `919 673 2035` de WhatsApp `+52 919 133 0424`.
 - Toda fotografía de stock debe tener licencia y fuente; las fotos de alimentos del local deben ser autorizadas por el cliente.
 - Semántica, una H1, alt útil o vacío si decorativo, foco y teclado.

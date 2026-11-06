@@ -104,3 +104,25 @@ test('respects reduced-motion preferences and keeps keyboard focus visible', asy
   expect(focus?.tag).toBe('A');
   expect(focus?.outlineStyle).not.toBe('none');
 });
+
+test('confirms the account on its dedicated mobile-first page', async ({ page }) => {
+  await page.goto('/verificar-tu-cuenta-socio-laexquisssita');
+  await expect(page.locator('main h1')).toHaveText('¡Tu cuenta ha sido confirmada!');
+  await expect(page.getByRole('status', { name: 'Cuenta confirmada' })).toBeVisible();
+  await expect(page.getByText('Visitas y puntos')).toBeVisible();
+  await expect(page.getByText('Novedades y recompensas')).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
+  await expect(page.getByRole('link', { name: 'Volver a La Exquisssita' })).toHaveAttribute('href', '/');
+
+  await page.setViewportSize({ width: 360, height: 780 });
+  const dimensions = await page.evaluate(() => ({
+    viewport: document.documentElement.clientWidth,
+    page: document.documentElement.scrollWidth,
+    card: document.querySelector('.confirmation-card')?.getBoundingClientRect(),
+  }));
+  expect(dimensions.page).toBeLessThanOrEqual(dimensions.viewport);
+  expect(dimensions.card?.width).toBeLessThanOrEqual(dimensions.viewport - 32);
+
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  expect(await page.locator('.seal-check').evaluate((el) => getComputedStyle(el).animationName)).toBe('none');
+});

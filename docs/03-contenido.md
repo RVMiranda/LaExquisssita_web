@@ -63,3 +63,5 @@ Los datos del menú confirmados por el usuario se mantienen tipados en `src/cont
 Categorías: tacos y gorditas (diez cortes); carne para llevar por peso (¼, ½, ¾ y 1 kg o por importe, ejemplo $100); chicharrón de cáscara y polvito; chorizo por kilo (¼, ½ o por importe, ejemplo $30); refrescos, Boing y aguas naturales. No se inventaron precios.
 
 Para bebidas se incluye una fotografía de cola de A L / Unsplash como recurso ilustrativo con atribución y fuente visible. No representa el inventario ni el establecimiento. No se añadieron fotos de alimentos; se solicitarán al cliente con permiso de publicación.
+
+La ruta `/verificar-tu-cuenta-socio-laexquisssita/` confirma el estado del correo y anima un check de manera sutil. Invita a volver a la app para iniciar sesión y consultar tarjeta, visitas, puntos, novedades y recompensas descritos en el cliente Android. No incluye datos de la cuenta, enlaces no verificados a tiendas ni inicio de sesión automático.

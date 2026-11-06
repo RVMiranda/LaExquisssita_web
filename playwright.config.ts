@@ -5,13 +5,13 @@ export default defineConfig({
   fullyParallel: true,
   reporter: 'list',
   use: {
-    baseURL: 'http://127.0.0.1:4331',
+    baseURL: 'http://127.0.0.1:4335',
     browserName: 'chromium',
     headless: true,
   },
   webServer: {
-    command: 'npm run preview -- --host 127.0.0.1 --port 4331 --ignore-lock',
-    url: 'http://127.0.0.1:4331',
+    command: 'npm run preview -- --host 127.0.0.1 --port 4335 --strictPort --ignore-lock',
+    url: 'http://127.0.0.1:4335',
     reuseExistingServer: true,
     timeout: 30_000,
   },
