@@ -1,6 +1,6 @@
 # Continuidad desde PC o Mac
 
-Actualizado: 6 de noviembre de 2026. La rama `dev` parte de `codex/landing-base` e incluye el menú por categorías, el copy confirmado por el cliente, el WhatsApp separado de la línea fija y la página estática de confirmación de cuenta. Lista para revisión/preview, no desplegada en producción.
+Actualizado: 6 de noviembre de 2026. La rama `dev` parte de `codex/landing-base` e incluye el menú por categorías, el copy confirmado por el cliente, el WhatsApp separado de la línea fija, la página estática de confirmación de cuenta, dos capturas demostrativas de la app y un footer compacto con el nombre del negocio y promoción separada de MirandaDevSource. Lista para revisión/preview, no desplegada en producción.
 
 En esta PC la carpeta ya existe: C:/Users/MACHENIKE/Projects/laexquisssita_web. Abrir esa carpeta como proyecto; no clonarla encima. Usar docs/10-prompt-inicio.md para iniciar el chat. Los comandos siguientes son para una máquina sin checkout, como la Mac.
 
@@ -22,6 +22,8 @@ Leer README, AGENTS y docs. Para desarrollo local, instalar Node `24.19.0` y npm
 3. Confirmar propiedad del dominio antes de preparar canonical o Cloudflare Pages.
 4. Seguir aceptación en `docs/06-aceptacion.md`; la landing queda pendiente de revisión del negocio.
 5. Configurar la URL de confirmación en Supabase después de tener una URL pública estable; probar el registro real y recuperación de contraseña antes de usarla como Site URL global.
+6. La sección Nuestra app muestra Inicio y Promociones en `public/app-preview/`; incluye una nota aclaratoria visible. Las capturas fuente originales permanecen en `assets/app-screenshots/`. Antes de usar el sitio en publicidad, validar el dominio legible en la captura de Inicio y las vigencias que aparecen en Promociones.
+7. El footer se redujo al nombre de La Exquisssita y la tarjeta de MirandaDevSource; la información comercial del restaurante sigue disponible en «Visítanos».
 
 ### Supabase: destino de confirmación
 

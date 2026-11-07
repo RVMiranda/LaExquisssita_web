@@ -55,3 +55,7 @@ El cliente compartió el menú actual: tacos y gorditas; chicharrón de cáscara
 ## Procedencia de la fotografía de bebidas — 6 de noviembre de 2026
 
 Para el grupo de bebidas se usa una fotografía ilustrativa de A L, publicada en Unsplash como «A glass of soda sitting on top of a wooden table». La [ficha de la foto](https://unsplash.com/photos/a-glass-of-soda-sitting-on-top-of-a-wooden-table-b2lznGjY97A) indica uso gratuito bajo la [Unsplash License](https://unsplash.com/license). Se generó un WebP optimizado en `public/menu/bebida-cola-ilustrativa.webp`. El texto alternativo y la leyenda aclaran que no es una foto del local ni del inventario. Las fotos de los alimentos quedan pendientes de material autorizado del cliente.
+
+## Contactos del footer — 6 de noviembre de 2026
+
+El usuario proporcionó `carnitaslaexquisssita@gmail.com` como correo del restaurante. Solicitó añadir al footer una promoción de su servicio de desarrollo y sus contactos e imagen. La app Android cliente muestra públicamente en Ajustes el WhatsApp de MirandaDevSource `+52 998 601 7858`, el correo `contacto@mirandadevsource.com` y un banner de marca en `app/src/main/res/drawable-nodpi/mirandadevsource_banner.jpg`. Se reutiliza el banner sin modificar el maestro; una copia web se sirve desde `public/brand/mirandadevsource-banner.jpg`. El CTA conserva el propósito y el texto de consulta a cotizar una aplicación para negocio que ya presenta la app cliente. Los datos del desarrollador se mantienen separados de los contactos comerciales del restaurante.

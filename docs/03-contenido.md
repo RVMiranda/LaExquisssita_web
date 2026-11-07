@@ -11,7 +11,7 @@ Estructura aprobada y teléfono fijo, dirección y horarios confirmados el 4 de 
 | Menú | Tacos y gorditas; carnes por kilo; chicharrones; chorizo; refrescos, jugos y aguas | Acordeón accesible por categorías; consultas por WhatsApp sin precios inventados |
 | Visita | El sabor te espera. Mapa, dirección y horario | Cómo llegar; llamada |
 | App | H2: Tu próxima visita empieza aquí. Texto: Conoce las novedades y lleva contigo tu tarjeta digital de La Exquisssita. | Conocer la app, solo con destino real |
-| Pie | Nombre, contactos y redes confirmadas, textos legales aplicables | Sin enlaces vacíos |
+| Pie | Nombre del negocio y bloque compacto de promoción de MirandaDevSource con banner y contactos | Datos de contacto comercial permanecen en Visítanos; no mezclar con el desarrollador |
 
 Club: descubrir novedades, consultar tarjeta y presentarla en caja. No anunciar tasas de puntos, regalos específicos o iOS sin confirmar. Hasta tres productos destacados solo si se aprueban nombre, descripción, fotografía, disponibilidad y precio si se publica.
 
@@ -52,9 +52,13 @@ Quiénes somos se confirmó junto con sus afirmaciones a solicitud del cliente e
 
 ## Implementación — 4 de noviembre de 2026
 
-La sección de visita ahora muestra dirección, horarios, llamada, mapa incrustado de la ficha confirmada y enlace «Abrir ubicación en Google Maps». El WhatsApp permanece en la bienvenida. La muestra conceptual de app presenta cabecera, tarjeta digital y novedades; su marco tiene hasta 350 px de ancho y la pantalla al menos 480 px de alto. Es una composición de referencia, no una medición ni captura de la app real.
+La sección de visita ahora muestra dirección, horarios, llamada, mapa incrustado de la ficha confirmada y enlace «Abrir ubicación en Google Maps». El WhatsApp permanece en la bienvenida. La app se ilustra con capturas del emulador Android en marco de celular: vistas Inicio y Promociones, con una nota visible que las identifica como demostrativas y advierte que promociones y datos pueden cambiar. Las capturas no son una oferta comercial vigente ni una especificación visual garantizada. Se conserva el material fuente en `assets/app-screenshots/`; las copias públicas están en `public/app-preview/`.
 
 Tipografía en evaluación con el cliente: My Soul para nombre y encabezados; Forum para el resto del contenido. El contrato original se conserva como histórico; la implementación y su revisión visual están registradas en `docs/09-validacion.md`.
+
+## Footer ampliado — 6 de noviembre de 2026
+
+El pie muestra únicamente el nombre del negocio y una tarjeta compacta que promociona el desarrollo de aplicaciones móviles de MirandaDevSource con banner, WhatsApp y correo. El contacto comercial del restaurante está en «Visítanos» y los datos del desarrollador se mantienen separados.
 
 ## Menú actual — 6 de noviembre de 2026
 

@@ -9,6 +9,7 @@ export interface EditorialText {
 
 export interface BusinessContent {
   name: string;
+  email: { display: string; href: string };
   phone: { display: string; href: string };
   whatsapp: { href: string; message: string };
   maps: { href: string; embed: string; placeName: string };
@@ -25,6 +26,10 @@ export interface BusinessContent {
 
 export const business = {
   name: 'La Exquisssita',
+  email: {
+    display: 'carnitaslaexquisssita@gmail.com',
+    href: 'mailto:carnitaslaexquisssita@gmail.com',
+  },
   phone: {
     display: '919 673 2035',
     href: 'tel:+529196732035',
