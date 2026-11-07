@@ -34,7 +34,7 @@ export const menuCategories: readonly MenuCategory[] = [
   {
     id: 'tacos-gorditas',
     title: 'Tacos y gorditas',
-    description: 'Elige el corte que más se te antoje.',
+    description: 'Elige el que más se te antoje.',
     groups: [
       {
         title: 'Carnes disponibles',
@@ -45,10 +45,10 @@ export const menuCategories: readonly MenuCategory[] = [
   {
     id: 'carne-por-kilo',
     title: 'Carne para llevar',
-    description: 'Los mismos cortes, pesados por kilo para llevar.',
+    description: 'Los mismos sabores, pesados por kilo para llevar.',
     groups: [
       {
-        title: 'Cortes',
+        title: 'Carnes disponibles',
         items: meatCuts,
       },
       {
@@ -69,7 +69,7 @@ export const menuCategories: readonly MenuCategory[] = [
       },
       {
         title: 'Chorizo por kilo',
-        items: ['¼ kg', '½ kg'],
+        items: ['¼ kg', '½ kg', '¾ kg', '1 kg'],
         note: 'También puedes pedir por importe; por ejemplo, $30.',
       },
     ],
