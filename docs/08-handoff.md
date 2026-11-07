@@ -1,6 +1,6 @@
 # Continuidad desde PC o Mac
 
-Actualizado: 4 de noviembre de 2026. Revisión funcional en `codex/landing-base`: mapa de la ficha confirmada, ajuste app ilustrativo con medidas, tipografía My Soul + Forum en evaluación, y Playwright. No desplegada.
+Actualizado: 6 de noviembre de 2026. La rama `dev` parte de `codex/landing-base` e incluye el menú por categorías, el copy confirmado por el cliente, el WhatsApp separado de la línea fija, la página estática de confirmación de cuenta, dos capturas demostrativas de la app y un footer compacto con el nombre del negocio y promoción separada de MirandaDevSource. Lista para revisión/preview, no desplegada en producción.
 
 En esta PC la carpeta ya existe: C:/Users/MACHENIKE/Projects/laexquisssita_web. Abrir esa carpeta como proyecto; no clonarla encima. Usar docs/10-prompt-inicio.md para iniciar el chat. Los comandos siguientes son para una máquina sin checkout, como la Mac.
 
@@ -9,7 +9,7 @@ En esta PC la carpeta ya existe: C:/Users/MACHENIKE/Projects/laexquisssita_web. 
     git clone https://github.com/RVMiranda/LaExquisssita_web.git laexquisssita_web
     cd laexquisssita_web
     git status
-    git switch -c codex/landing-base
+    git switch -c dev --track origin/dev
 
 Para correr la implementación, instalar Node `24.19.0` y npm 11, ejecutar `npm ci`; iniciar el servidor con `npm run dev`, revisar tipos con `npm run check` y generar el sitio con `npm run build`. Para Playwright, instalar Chromium con `npx playwright install chromium` y ejecutar `npm test` después del build.
 
@@ -17,10 +17,17 @@ Leer README, AGENTS y docs. Para desarrollo local, instalar Node `24.19.0` y npm
 
 ## Estado y próxima iteración
 
-1. Revisar la combinación tipográfica y aprobar el borrador editorial de «Quiénes somos».
+1. Revisar con el cliente el menú y el diseño general; My Soul + Forum sigue siendo una prueba tipográfica.
 2. Integrar fotos autorizadas, redes y ficha pública de la app si se comparten.
 3. Confirmar propiedad del dominio antes de preparar canonical o Cloudflare Pages.
 4. Seguir aceptación en `docs/06-aceptacion.md`; la landing queda pendiente de revisión del negocio.
+5. Configurar la URL de confirmación en Supabase después de tener una URL pública estable; probar el registro real y recuperación de contraseña antes de usarla como Site URL global.
+6. La sección Nuestra app muestra Inicio y Promociones en `public/app-preview/`; incluye una nota aclaratoria visible. Las capturas fuente originales permanecen en `assets/app-screenshots/`. Antes de usar el sitio en publicidad, validar el dominio legible en la captura de Inicio y las vigencias que aparecen en Promociones.
+7. El footer se redujo al nombre de La Exquisssita y la tarjeta de MirandaDevSource; la información comercial del restaurante sigue disponible en «Visítanos».
+
+### Supabase: destino de confirmación
+
+La ruta pública será `https://<dominio-confirmado>/verificar-tu-cuenta-socio-laexquisssita/` (o el URL temporal de Pages para probar). Añadirla como Redirect URL permitida en Authentication → URL Configuration. La app actual llama `signUpWith(Email)` sin `redirectTo`, así que Supabase usa el `Site URL` configurado como destino por defecto, según [la guía oficial de redirects](https://supabase.com/docs/guides/auth/redirect-urls). Antes de cambiarlo, revisar el template Confirm signup y probar recuperación de contraseña y otros correos, porque el Site URL puede servir como destino por defecto de otros flujos. La página solo muestra el resultado exitoso posterior a la verificación Supabase; no consume tokens ni debe usarse como callback de errores.
 
 Sin fotos se puede construir estructura; sin ficha de tienda no se puede ofrecer descarga, pero sí explicar club.
 
@@ -30,6 +37,6 @@ Ramas codex distintas y PR a main. Repartir archivos: contenido en docs/03-conte
 
 ## Preguntas para cliente
 
-Pendientes: aprobación del borrador «Quiénes somos», fotos autorizadas, redes, ficha de tienda/app, beneficios anunciables, evaluación tipográfica y propiedad de laexquisssita.com. Historia, contacto, domicilio, horario y ficha Maps están confirmados.
+Pendientes: fotos autorizadas, redes, ficha de tienda/app, evaluación tipográfica, propiedad de laexquisssita.com y configuración/prueba del redirect de confirmación en Supabase. Los beneficios descritos en esta pantalla se basan en las funciones vistas en la app de clientes.
 
 No hay proyecto Cloudflare creado, dominio enlazado ni web publicada. Chequeo de tipos y build pasaron; las validaciones y límites restantes están en `docs/09-validacion.md`. Las apps fueron revisadas como código, no ejecutadas.

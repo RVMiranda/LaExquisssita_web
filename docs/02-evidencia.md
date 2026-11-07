@@ -45,3 +45,17 @@ El usuario compartió para publicación que La Exquisssita se fundó en 1998 por
 ## Confirmación de ubicación — 4 de noviembre de 2026
 
 El usuario proporcionó el enlace de Maps `https://maps.app.goo.gl/wbjhmojxTzkYqQvd8?g_st=iw` para La Exquisssita. La ficha enlazada se identificó como «Carnitas estilo Michoacán la EXQUISSSITA», en Periférico Oriente Sur s/n, Barrio Aeropuerto, Ocosingo, Chiapas. Se validó el pin de la ficha y se obtuvo su iframe oficial de «Compartir > Incorporar un mapa»; el botón público abre el enlace del negocio en Google Maps y el bloque Visitarnos incluye ese mapa. La coordenada de la ficha corresponde al lugar del enlace, no a una geocodificación deducida de la dirección. No se confirmó propiedad del dominio.
+
+## Confirmaciones del cliente — 6 de noviembre de 2026
+
+El usuario aclaró que `919 673 2035` es la línea fija para llamadas y que WhatsApp utiliza otra línea, `+52 919 133 0424`. Esta confirmación sustituye el número de WhatsApp anterior; el teléfono fijo permanece igual. También confirmó que las afirmaciones del borrador de «Quiénes somos» (negocio pionero, calidad, servicio, tradición y productos derivados del cerdo) corresponden al copy solicitado por el cliente; el contenido se registra como `confirmed` en `src/content/business.ts`.
+
+El cliente compartió el menú actual: tacos y gorditas; chicharrón de cáscara y polvito; chorizo y carne por kilo con sus presentaciones/importe; refrescos, Boing y aguas naturales. El detalle exacto se mantiene en `src/content/menu.ts`, sin inventar precios.
+
+## Procedencia de la fotografía de bebidas — 6 de noviembre de 2026
+
+Para el grupo de bebidas se usa una fotografía ilustrativa de A L, publicada en Unsplash como «A glass of soda sitting on top of a wooden table». La [ficha de la foto](https://unsplash.com/photos/a-glass-of-soda-sitting-on-top-of-a-wooden-table-b2lznGjY97A) indica uso gratuito bajo la [Unsplash License](https://unsplash.com/license). Se generó un WebP optimizado en `public/menu/bebida-cola-ilustrativa.webp`. El texto alternativo y la leyenda aclaran que no es una foto del local ni del inventario. Las fotos de los alimentos quedan pendientes de material autorizado del cliente.
+
+## Contactos del footer — 6 de noviembre de 2026
+
+El usuario proporcionó `carnitaslaexquisssita@gmail.com` como correo del restaurante. Solicitó añadir al footer una promoción de su servicio de desarrollo y sus contactos e imagen. La app Android cliente muestra públicamente en Ajustes el WhatsApp de MirandaDevSource `+52 998 601 7858`, el correo `contacto@mirandadevsource.com` y un banner de marca en `app/src/main/res/drawable-nodpi/mirandadevsource_banner.jpg`. Se reutiliza el banner sin modificar el maestro; una copia web se sirve desde `public/brand/mirandadevsource-banner.jpg`. El CTA conserva el propósito y el texto de consulta a cotizar una aplicación para negocio que ya presenta la app cliente. Los datos del desarrollador se mantienen separados de los contactos comerciales del restaurante.

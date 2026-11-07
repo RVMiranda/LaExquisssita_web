@@ -8,7 +8,7 @@ Selección por adecuación al alcance, no por una clasificación universal.
 | sites | Plugin instalado | Narrativa y alcance; hosting propio solicitado prevalece |
 | logo-design | Local | Conservación, tamaños y límites; sin rediseño |
 | frontend-design | Guía oficial Anthropic consultada | Composición, tipografía y revisión de propuesta |
-| apple-design | Skill local `C:\Users\MACHENIKE\.codex\skills\apple-design\SKILL.md` | Auditoría tipográfica y de interacción; foco, respuesta de controles y reduced motion |
+| apple-design | Skill local `C:\Users\MACHENIKE\.codex\skills\apple-design\SKILL.md` | Auditoría tipográfica; menú con disclosures nativos; confirmación con movimiento sutil, foco y reduced motion |
 
 Guía externa leída, no instalada globalmente. Sin plugins/dependencias instalados en esta entrega.
 

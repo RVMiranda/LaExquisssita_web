@@ -3,7 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import HistorySection from '../components/HistorySection.astro';
 import LocationMap from '../components/LocationMap.astro';
+import MenuSection from '../components/MenuSection.astro';
 import { business } from '../content/business';
+import { developer } from '../content/developer';
 ---
 
 <BaseLayout>
@@ -53,6 +55,8 @@ import { business } from '../content/business';
     </section>
 
     <HistorySection history={business.history} />
+
+    <MenuSection />
 
     <section class="visit-section" id="visita" aria-labelledby="visit-title">
       <div class="visit-inner wrap">
@@ -109,37 +113,59 @@ import { business } from '../content/business';
             ))}
           </ul>
         </div>
-        <figure class="app-preview">
-          <div class="app-device">
-            <div class="app-screen">
-              <div class="app-screen-heading">
-                <span class="app-screen-brand">{business.name}</span>
-                <span class="app-screen-intro">Un gusto tenerte cerca</span>
-              </div>
-              <section class="app-card app-card-loyalty" aria-label="Vista conceptual de tarjeta digital">
-                <span class="app-card-kicker">Tarjeta digital</span>
-                <span class="app-card-flower" aria-hidden="true"></span>
-                <span class="app-card-copy">Preséntala<br />en caja</span>
-              </section>
-              <section class="app-card app-card-news" aria-label="Vista conceptual de novedades">
-                <span class="app-card-kicker">Novedades</span>
-                <span class="news-rule" aria-hidden="true"></span>
-                <span class="app-news-title">Lo nuevo<br />de La Exquisssita</span>
-              </section>
-            </div>
-          </div>
-          <figcaption>Vista conceptual: marco de hasta 350 px de ancho, con cabecera, tarjeta digital y novedades. La pantalla mide al menos 480 px de alto; no es una captura ni especificación de la app real.</figcaption>
-        </figure>
+        <div class="app-gallery" aria-label="Vistas demostrativas de la app">
+          <figure class="app-preview">
+            <img
+              src="/app-preview/inicio-pixel-10-pro.png"
+              alt="Vista de inicio de la app La Exquisssita en un marco de celular Android"
+              width="1410"
+              height="2968"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Inicio</figcaption>
+          </figure>
+          <figure class="app-preview app-preview-promotions">
+            <img
+              src="/app-preview/promociones-pixel-10-pro.png"
+              alt="Vista de promociones de la app La Exquisssita en un marco de celular Android"
+              width="1410"
+              height="2968"
+              loading="lazy"
+              decoding="async"
+            />
+            <figcaption>Promociones</figcaption>
+          </figure>
+          <p class="app-demo-note">Estas capturas son únicamente demostrativas. El contenido, las promociones y los datos visibles pueden cambiar; consulta la app para ver la información vigente.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner wrap">
-      <a class="wordmark footer-wordmark" href="#inicio"><span class="wordmark-flower" aria-hidden="true"></span><span>{business.name}</span></a>
-      <p>Carnitas en Ocosingo, Chiapas</p>
-      <a href={business.phone.href}>{business.phone.display}</a>
-      <span class="copyright">Con gusto te esperamos.</span>
+      <div class="footer-business">
+        <a class="wordmark footer-wordmark" href="#inicio"><span class="wordmark-flower" aria-hidden="true"></span><span>{business.name}</span></a>
+      </div>
+      <aside class="developer-promo" aria-labelledby="developer-title">
+        <img
+          src={developer.image}
+          alt={`Logotipo de ${developer.name}`}
+          width="2552"
+          height="600"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="developer-promo-copy">
+          <p class="developer-kicker">¿También buscas una app para tu negocio?</p>
+          <h2 id="developer-title">Hablemos de tu proyecto.</h2>
+          <p>{developer.service}</p>
+          <div class="developer-links">
+            <a href={developer.whatsapp.href} target="_blank" rel="noreferrer">WhatsApp {developer.whatsapp.display}</a>
+            <a href={developer.email.href}>{developer.email.display}</a>
+          </div>
+        </div>
+      </aside>
     </div>
   </footer>
 </BaseLayout>

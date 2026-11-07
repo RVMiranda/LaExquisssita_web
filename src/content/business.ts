@@ -9,6 +9,7 @@ export interface EditorialText {
 
 export interface BusinessContent {
   name: string;
+  email: { display: string; href: string };
   phone: { display: string; href: string };
   whatsapp: { href: string; message: string };
   maps: { href: string; embed: string; placeName: string };
@@ -25,6 +26,10 @@ export interface BusinessContent {
 
 export const business = {
   name: 'La Exquisssita',
+  email: {
+    display: 'carnitaslaexquisssita@gmail.com',
+    href: 'mailto:carnitaslaexquisssita@gmail.com',
+  },
   phone: {
     display: '919 673 2035',
     href: 'tel:+529196732035',
@@ -46,8 +51,8 @@ export const business = {
   about: {
     title: 'Quiénes somos',
     text: 'Somos Carnitas al estilo Michoacán La Exquisssita, una taquería fundada en Ocosingo y pioneros en la venta de carnitas. Además de nuestros exquisssitos tacos, ofrecemos otros productos derivados del cerdo, como chicharrón y chorizo. Nuestro negocio se distingue por ofrecer productos de alta calidad y un servicio excepcional, manteniendo siempre nuestras tradiciones y valores, siempre con el objetivo de satisfacer a nuestros clientes con el mejor sabor posible.',
-    status: 'draft',
-    note: 'Borrador formal, pendiente de la aprobacion del cliente.',
+    status: 'confirmed',
+    note: 'Copy y afirmaciones solicitados por el cliente, confirmados por el usuario responsable el 6 de noviembre de 2026.',
   },
   history: {
     title: 'Un pedazo de historia',

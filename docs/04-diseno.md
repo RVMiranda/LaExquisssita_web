@@ -42,3 +42,9 @@ La paleta se conserva por evidencia, no por tendencia. La singularidad vendrá d
 My Soul se aplica al nombre y a H1/H2; Forum al texto, navegación, acciones y datos prácticos. La sección de app muestra una composición conceptual con cabecera, tarjeta y novedades. La prueba sigue abierta a evaluación del cliente. Se aplicaron los criterios pertinentes de la skill `apple-design`: escala tipográfica y legibilidad, realimentación discreta en controles, foco visible y respeto de `prefers-reduced-motion`. No se añadieron gestos ni animaciones de movimiento a esta página informativa.
 
 Visita usa la ficha de Google Maps entregada por el cliente; el mapa es un iframe externo y depende de la disponibilidad de Google Maps y conexión del visitante. Se omite la ficha de tienda al no haber URL confirmada.
+
+## Menú — 6 de noviembre de 2026
+
+Las categorías del menú usan el disclosure nativo `<details>/<summary>` con apertura exclusiva mediante `name`, sin carrusel, autoplay ni dependencias de JavaScript. La categoría de tacos abre por defecto; el cliente controla el resto con clic o teclado. Los chips son etiquetas informativas, no controles de pedido. Se respetan foco visible y movimiento reducido.
+
+La fotografía de bebidas es una imagen libre de Unsplash atribuida a A L, presentada como ilustrativa y no como producto/foto del restaurante. La sección se apoya en el contenido tipográfico del menú hasta recibir fotografías autorizadas de comida.

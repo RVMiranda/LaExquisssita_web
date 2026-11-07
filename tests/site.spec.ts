@@ -15,7 +15,7 @@ test('shows one clear page heading and the confirmed visit details', async ({ pa
 });
 
 test('opens the confirmed Google Maps pin and embeds the matching place', async ({ page }) => {
-  const mapsAction = page.getByRole('link', { name: 'Abrir ubicación en Google Maps' });
+  const mapsAction = page.getByRole('link', { name: /Abrir ubicación/ });
   await expect(mapsAction).toHaveAttribute('href', 'https://maps.app.goo.gl/wbjhmojxTzkYqQvd8');
   await expect(mapsAction).toHaveAttribute('target', '_blank');
 
@@ -29,11 +29,31 @@ test('opens the confirmed Google Maps pin and embeds the matching place', async 
   expect(box?.height).toBeGreaterThanOrEqual(200);
 });
 
-test('keeps the WhatsApp and phone actions on their confirmed destinations', async ({ page }) => {
+test('keeps the separate WhatsApp and landline actions on their destinations', async ({ page }) => {
   await expect(page.getByRole('link', { name: /Consultar por WhatsApp/ }).first())
-    .toHaveAttribute('href', /https:\/\/wa\.me\/529196732035\?text=/);
+    .toHaveAttribute('href', /https:\/\/wa\.me\/529191330424\?text=/);
   await expect(page.getByRole('link', { name: '919 673 2035' }).first())
     .toHaveAttribute('href', 'tel:+529196732035');
+});
+
+test('explores menu categories through native keyboard-friendly disclosures', async ({ page }) => {
+  const categories = page.locator('details.menu-category');
+  await expect(categories).toHaveCount(4);
+  await expect(categories.nth(0)).toHaveAttribute('open', '');
+  await expect(page.getByText('Maciza', { exact: true }).first()).toBeVisible();
+  await expect(page.getByText('Hígado', { exact: true }).first()).toBeVisible();
+
+  await categories.nth(1).locator('summary').focus();
+  await page.keyboard.press('Enter');
+  await expect(categories.nth(1)).toHaveAttribute('open', '');
+  await expect(categories.nth(0)).not.toHaveAttribute('open', '');
+  await expect(page.getByText('¾ kg', { exact: true })).toBeVisible();
+  await expect(page.getByText('También puedes pedir por importe; por ejemplo, $100.')).toBeVisible();
+
+  await categories.nth(3).locator('summary').click();
+  await expect(page.getByText('Manzana Mundet', { exact: true })).toBeVisible();
+  await expect(page.getByText('Aguas 100% naturales', { exact: true })).toBeVisible();
+  await expect(page.getByAltText(/imagen ilustrativa, no tomada en La Exquisssita/)).toBeVisible();
 });
 
 test('uses the requested typography and details the app features conceptually', async ({ page }) => {
@@ -83,4 +103,26 @@ test('respects reduced-motion preferences and keeps keyboard focus visible', asy
   });
   expect(focus?.tag).toBe('A');
   expect(focus?.outlineStyle).not.toBe('none');
+});
+
+test('confirms the account on its dedicated mobile-first page', async ({ page }) => {
+  await page.goto('/verificar-tu-cuenta-socio-laexquisssita');
+  await expect(page.locator('main h1')).toHaveText('¡Tu cuenta ha sido confirmada!');
+  await expect(page.getByRole('status', { name: 'Cuenta confirmada' })).toBeVisible();
+  await expect(page.getByText('Visitas y puntos')).toBeVisible();
+  await expect(page.getByText('Novedades y recompensas')).toBeVisible();
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, nofollow');
+  await expect(page.getByRole('link', { name: 'Volver a La Exquisssita' })).toHaveAttribute('href', '/');
+
+  await page.setViewportSize({ width: 360, height: 780 });
+  const dimensions = await page.evaluate(() => ({
+    viewport: document.documentElement.clientWidth,
+    page: document.documentElement.scrollWidth,
+    card: document.querySelector('.confirmation-card')?.getBoundingClientRect(),
+  }));
+  expect(dimensions.page).toBeLessThanOrEqual(dimensions.viewport);
+  expect(dimensions.card?.width).toBeLessThanOrEqual(dimensions.viewport - 32);
+
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  expect(await page.locator('.seal-check').evaluate((el) => getComputedStyle(el).animationName)).toBe('none');
 });

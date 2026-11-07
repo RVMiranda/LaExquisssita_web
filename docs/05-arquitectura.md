@@ -7,9 +7,12 @@ Contenido público y enlaces: no requiere React, servidor, cuentas, base de dato
 ## Estructura implementada
 
 - src/pages/index.astro
+- src/pages/verificar-tu-cuenta-socio-laexquisssita.astro
 - src/layouts/BaseLayout.astro
 - src/components/
+- src/components/MenuSection.astro
 - src/content/business.ts
+- src/content/menu.ts
 - src/styles/tokens.css y global.css
 - src/assets/ para fotos optimizadas
 - public/brand/ para derivados elegidos
@@ -17,6 +20,8 @@ Contenido público y enlaces: no requiere React, servidor, cuentas, base de dato
 - docs/
 
 La primera versión está implementada en Astro estático. El contenido editorial vive fuera de los componentes y las notas internas no se publican.
+
+La ruta de confirmación de cuenta es una página estática de éxito, sin SDK, backend ni validación de tokens en el navegador. Supabase debe completar la verificación antes de redirigir a esta URL. Se marca `noindex, nofollow` y nunca muestra datos personales.
 
 ## Implementación inicial
 
@@ -34,7 +39,7 @@ Salida estática dist; sin adaptador Cloudflare por defecto. Si se introduce ren
 6. Conectar dominio confirmado, HTTPS y canonical entre www/apex.
 7. Revisar sitemap, robots, 404, metadatos y enlaces.
 
-No configurar despliegue mientras solo haya documentos. Push a GitHub no equivale a publicación web.
+La primera implementación y menú viven en una rama de revisión. Para Pages, los despliegues de `dev` deben ser previews; no fusionar a `main` ni configurar DNS hasta aprobarlo. Push a GitHub por sí solo no equivale a publicación web.
 
 ## SEO y rendimiento
 
@@ -42,7 +47,7 @@ HTML es-MX, título/descripción concretos, una H1, Open Graph aprobado. Datos R
 
 Reservar dimensiones, AVIF/WebP cuando convenga, lazy load bajo primer viewport, fuentes locales. Medir SVG complejos antes de usarlos en página.
 
-Menú futuro requiere fuente editorial; no exponer inventario. Promociones dinámicas requieren contrato de vigencia, permisos, caché y actualización.
+El menú actual contiene la oferta confirmada y no revela precios ni inventario. Precios de lista, disponibilidad dinámica o promociones requieren fuente editorial, vigencia, permisos, caché y actualización.
 
 ## Fuentes consultadas el 3 y revisadas el 4 de noviembre de 2026
 
@@ -56,6 +61,10 @@ Implementación inicial: Astro 7.4.5, `@astrojs/check` 0.9.12, TypeScript 5.9.3,
 
 ## Revisión funcional — 4 de noviembre de 2026
 
-La página utiliza un iframe de Google Maps obtenido desde la acción de compartir/incorporar de la ficha proporcionada por el cliente; el botón abre el enlace corto de esa ficha. Es contenido remoto, sin SDK, proxy ni credenciales propios. Se añade Playwright Test 1.64.1 como dependencia de desarrollo para verificar estructura, destinos de enlaces, layout responsive y accesibilidad básica. `npm test` lanza el preview estático en el puerto local 4331; requiere generar `dist/` antes y descargar Chromium con `npx playwright install chromium` en una máquina nueva.
+La página utiliza un iframe de Google Maps obtenido desde la acción de compartir/incorporar de la ficha proporcionada por el cliente; el botón abre el enlace corto de esa ficha. Es contenido remoto, sin SDK, proxy ni credenciales propios. Se añade Playwright Test 1.64.1 como dependencia de desarrollo para verificar estructura, destinos de enlaces, layout responsive y accesibilidad básica. `npm test` lanza el preview estático en el puerto local 4335 con puerto estricto; requiere generar `dist/` antes y descargar Chromium con `npx playwright install chromium` en una máquina nueva.
 
 La combinación tipográfica temporal My Soul + Forum se solicita desde Google Fonts. La composición de app es HTML/CSS ilustrativo, no importa estado ni captura de Android.
+
+El menú es contenido TypeScript tipado y aislado del componente. Usa disclosures HTML nativos con `name` para exclusividad, sin backend, carrito, precios ni lógica de pedido. Un WebP local de Unsplash se usa en el panel de bebidas como fotografía ilustrativa, con su licencia y procedencia en `docs/02-evidencia.md`.
+
+La pantalla para confirmar el correo es mobile-first y usa solo CSS/SVG inline para un check animado; el movimiento se elimina con `prefers-reduced-motion`. Para usarla, registrar su URL exacta como Redirect URL permitida en Supabase. La app Android revisada no pasa `redirectTo` al registrarse; por tanto, Supabase usa el `Site URL` configurado como destino por defecto. Configurar el destino en el template de confirmación/Site URL y probar también recuperación de contraseña y otros correos antes de cambiar un valor global. Esta página muestra el resultado esperado después de que Supabase confirma el correo; no valida la sesión ni el token por sí misma.

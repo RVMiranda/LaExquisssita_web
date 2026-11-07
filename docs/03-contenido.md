@@ -1,16 +1,17 @@
 # Contrato de contenido
 
-Estructura aprobada y teléfono, dirección y horarios confirmados por el usuario el 4 de noviembre de 2026. El copy sigue siendo una propuesta editorial.
+Estructura aprobada y teléfono fijo, dirección y horarios confirmados el 4 de noviembre de 2026. WhatsApp, afirmaciones del copy y menú actual se confirmaron el 6 de noviembre de 2026. Los únicos importes que aparecen son ejemplos que compartió el cliente; no son precios de productos.
 
 | Bloque | Texto / contenido | Acción |
 |---|---|---|
-| Cabecera | Busto + La Exquisssita; Nosotros; Visítanos; Nuestra app | Anclas |
-| Bienvenida | H1: Se antojan unas carnitas. Se antoja La Exquisssita. Texto: Conócenos en Ocosingo y consulta tu pedido para llevar. | Consultar por WhatsApp |
-| Quiénes somos | H2: Quiénes somos. Borrador: Somos La Exquisssita, un negocio de carnitas en Ocosingo. Puedes visitarnos o consultar tu pedido para llevar. | Presentación sin promesas no verificadas |
-| Nuestra historia | H2: Nuestra historia. Relato real pendiente: inicio, personas, origen y evolución. | No inventar cronología ni tradición familiar |
-| Carnitas y visita | H2: Te esperamos en Ocosingo. Foto real, presentación, dirección y horario | Cómo llegar; llamada |
+| Cabecera | Busto + La Exquisssita; Nosotros; Menú; Visítanos; Nuestra app | Anclas |
+| Bienvenida | H1: Se antojan unas carnitas. Se antoja La Exquisssita. Texto: Tradición y sabor inigualable. | Consultar por WhatsApp |
+| Quiénes somos | Copy solicitado por el cliente, confirmado el 6 de noviembre de 2026 | Presentación del negocio |
+| Nuestra historia | Fundación en 1998, Valentín Miranda Martínez y Beatriz Silva Bailón; continuidad familiar | Relato confirmado, contenido separado |
+| Menú | Tacos y gorditas; carnes por kilo; chicharrones; chorizo; refrescos, jugos y aguas | Acordeón accesible por categorías; consultas por WhatsApp sin precios inventados |
+| Visita | El sabor te espera. Mapa, dirección y horario | Cómo llegar; llamada |
 | App | H2: Tu próxima visita empieza aquí. Texto: Conoce las novedades y lleva contigo tu tarjeta digital de La Exquisssita. | Conocer la app, solo con destino real |
-| Pie | Nombre, contactos y redes confirmadas, textos legales aplicables | Sin enlaces vacíos |
+| Pie | Nombre del negocio y bloque compacto de promoción de MirandaDevSource con banner y contactos | Datos de contacto comercial permanecen en Visítanos; no mezclar con el desarrollador |
 
 Club: descubrir novedades, consultar tarjeta y presentarla en caja. No anunciar tasas de puntos, regalos específicos o iOS sin confirmar. Hasta tres productos destacados solo si se aprueban nombre, descripción, fotografía, disponibilidad y precio si se publica.
 
@@ -25,21 +26,21 @@ Omitir opcionales ausentes. No mostrar metadatos al visitante. Un dato requerido
 Confirmación: usuario responsable del proyecto en el chat de preparación.
 - Dirección: Periférico Oriente Sur s/n, Barrio Aeropuerto, Ocosingo, Chiapas.
 - Horario: lunes a sábado 08:00–16:00; domingo 08:00–15:00.
-- Teléfono: 919 673 2035; WhatsApp: +52 919 673 2035.
+- Teléfono fijo: 919 673 2035. La línea de WhatsApp se confirmó después y se registra debajo.
 
 ## Enlaces
 
-WhatsApp: https://wa.me/529196732035. Mensaje codificado para URL: «Hola, quisiera consultar un pedido para llevar en La Exquisssita».
+WhatsApp: https://wa.me/529191330424. Línea distinta a la fija, confirmada por el usuario el 6 de noviembre de 2026. Mensaje codificado para URL: «Hola, quisiera consultar un pedido para llevar en La Exquisssita».
 Llamada: tel:+529196732035.
 Maps: ficha confirmada por el usuario el 4 de noviembre de 2026: https://maps.app.goo.gl/wbjhmojxTzkYqQvd8. Se usa como destino del botón «Abrir ubicación en Google Maps» y como la ficha del mapa incrustado. Procedencia y validación en `docs/02-evidencia.md`.
 App: no fabricar URL con applicationId. Sin ficha, omitir descarga y explicar club sin prometer disponibilidad. Wallet y deep links no confirmados.
 
 ## Material pendiente
 
-Antes de publicar: aprobación del copy y derechos de las fotos utilizadas. Teléfono, dirección, horario y ficha de Maps ya confirmados.
+Antes de publicar: solicitar y aprobar fotos reales de los alimentos. Línea fija, WhatsApp, copy de Quiénes somos, menú, dirección, horario y ficha de Maps confirmados.
 Antes de enlazar app: ficha pública y beneficios anunciables.
 Antes de dominio: propiedad y acceso Cloudflare/DNS.
-Para enriquecer: 3–5 fotos de comida servida, fachada y ambiente; historia real, menú y redes.
+Para enriquecer: 3–5 fotos autorizadas de comida servida, fachada y ambiente; redes sociales.
 
 Primera versión sin formularios. No trasladar automáticamente el aviso legal de la app a la web.
 
@@ -47,10 +48,24 @@ Primera versión sin formularios. No trasladar automáticamente el aviso legal d
 
 El 4 de noviembre de 2026, el usuario confirmó para publicación el inicio en 1998, sus fundadores, la continuidad en el mismo lugar, el manejo familiar y quién lleva el negocio actualmente. El modelo mantiene estado editorial `confirmed` y registra la procedencia. La redacción es una paráfrasis revisable. Si se cambia a `draft`, el componente muestra el estado solo en desarrollo y omite la sección del build público. No añadir cronología ni técnicas de preparación sin evidencia.
 
-Quiénes somos permanece como borrador editorial (`draft`) basado solo en carnitas, Ocosingo y consulta de pedidos para llevar; requiere aprobación del negocio.
+Quiénes somos se confirmó junto con sus afirmaciones a solicitud del cliente el 6 de noviembre de 2026. Su estado editorial pasa a `confirmed` en `src/content/business.ts`.
 
 ## Implementación — 4 de noviembre de 2026
 
-La sección de visita ahora muestra dirección, horarios, llamada, mapa incrustado de la ficha confirmada y enlace «Abrir ubicación en Google Maps». El WhatsApp permanece en la bienvenida. La muestra conceptual de app presenta cabecera, tarjeta digital y novedades; su marco tiene hasta 350 px de ancho y la pantalla al menos 480 px de alto. Es una composición de referencia, no una medición ni captura de la app real.
+La sección de visita ahora muestra dirección, horarios, llamada, mapa incrustado de la ficha confirmada y enlace «Abrir ubicación en Google Maps». El WhatsApp permanece en la bienvenida. La app se ilustra con capturas del emulador Android en marco de celular: vistas Inicio y Promociones, con una nota visible que las identifica como demostrativas y advierte que promociones y datos pueden cambiar. Las capturas no son una oferta comercial vigente ni una especificación visual garantizada. Se conserva el material fuente en `assets/app-screenshots/`; las copias públicas están en `public/app-preview/`.
 
 Tipografía en evaluación con el cliente: My Soul para nombre y encabezados; Forum para el resto del contenido. El contrato original se conserva como histórico; la implementación y su revisión visual están registradas en `docs/09-validacion.md`.
+
+## Footer ampliado — 6 de noviembre de 2026
+
+El pie muestra únicamente el nombre del negocio y una tarjeta compacta que promociona el desarrollo de aplicaciones móviles de MirandaDevSource con banner, WhatsApp y correo. El contacto comercial del restaurante está en «Visítanos» y los datos del desarrollador se mantienen separados.
+
+## Menú actual — 6 de noviembre de 2026
+
+Los datos del menú confirmados por el usuario se mantienen tipados en `src/content/menu.ts`; `MenuSection.astro` los presenta en disclosures nativos exclusivos, con una categoría abierta a la vez, operación por teclado y contenido disponible sin JavaScript. No es un sistema de pedidos: no hay carrito, precios de lista ni promesas de disponibilidad. El CTA consulta por WhatsApp.
+
+Categorías: tacos y gorditas (diez cortes); carne para llevar por peso (¼, ½, ¾ y 1 kg o por importe, ejemplo $100); chicharrón de cáscara y polvito; chorizo por kilo (¼, ½ o por importe, ejemplo $30); refrescos, Boing y aguas naturales. No se inventaron precios.
+
+Para bebidas se incluye una fotografía de cola de A L / Unsplash como recurso ilustrativo con atribución y fuente visible. No representa el inventario ni el establecimiento. No se añadieron fotos de alimentos; se solicitarán al cliente con permiso de publicación.
+
+La ruta `/verificar-tu-cuenta-socio-laexquisssita/` confirma el estado del correo y anima un check de manera sutil. Invita a volver a la app para iniciar sesión y consultar tarjeta, visitas, puntos, novedades y recompensas descritos en el cliente Android. No incluye datos de la cuenta, enlaces no verificados a tiendas ni inicio de sesión automático.
