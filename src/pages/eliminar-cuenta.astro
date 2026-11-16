@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { accountDeletionMailto } from '../content/legal';
+---
+
+<BaseLayout
+  title="Eliminar cuenta de socio | La Exquisssita"
+  description="Solicita la eliminación de tu cuenta y datos asociados al Club de Recompensas de La Exquisssita."
+>
+  <main class="deletion-page wrap" aria-labelledby="deletion-title">
+    <a class="wordmark deletion-wordmark" href="/" aria-label="La Exquisssita, volver al inicio">
+      <span class="wordmark-flower" aria-hidden="true"></span><span>La Exquisssita</span>
+    </a>
+    <section class="deletion-card">
+      <p class="eyebrow">Privacidad · Cuenta de socio</p>
+      <h1 id="deletion-title">Solicitar eliminación de cuenta</h1>
+      <p>Si tienes acceso a la app, puedes eliminar tu cuenta desde <strong>Ajustes &gt; Eliminar mi cuenta</strong>. La solicitud se confirma dentro de la app antes de ejecutarse.</p>
+      <p>Si ya no puedes acceder, inicia una solicitud por correo. Incluye el correo asociado a la cuenta y el nombre del perfil para identificarla. No envíes contraseñas ni tu código QR.</p>
+      <a class="button button-primary deletion-button" href={accountDeletionMailto}>Solicitar eliminación por correo <span aria-hidden="true">↗</span></a>
+      <div class="deletion-details">
+        <h2>Qué ocurre con la cuenta</h2>
+        <p>La baja permanente revoca el QR de socio, cancela la tarjeta y los puntos, y anonimiza el perfil. Para impedir el registro posterior del mismo correo, el sistema conserva un HMAC del correo normalizado en una lista restringida, además de un registro anonimizado que conserva referencias del historial. El aviso actual de la app no establece un plazo de expiración para esos registros.</p>
+      </div>
+      <p class="deletion-contact">Para otras solicitudes sobre tus datos, escribe a <a href="mailto:carnitaslaexquisssita@gmail.com">carnitaslaexquisssita@gmail.com</a>.</p>
+      <nav class="deletion-links" aria-label="Avisos legales">
+        <a href="/aviso-de-privacidad/">Aviso de privacidad de la app</a>
+        <a href="/terminos-condiciones/">Términos y condiciones</a>
+      </nav>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .deletion-page { min-height: 100svh; padding-block: 28px 72px; }
+  .deletion-wordmark { margin-bottom: clamp(32px, 7vw, 72px); }
+  .deletion-card { width: min(100%, 760px); margin-inline: auto; padding: clamp(26px, 6vw, 58px); border: 1px solid rgb(126 57 47 / 13%); border-radius: 24px; background: var(--color-paper); }
+  .deletion-card h1 { margin: 0 0 16px; color: var(--color-chocolate); font-size: clamp(2.8rem, 6vw, 4.5rem); letter-spacing: 0; line-height: 1.02; }
+  .deletion-card > p { color: #654b43; font-size: 19px; line-height: 1.6; }
+  .deletion-card strong { color: var(--color-chocolate); }
+  .deletion-button { margin: 8px 0 20px; font-size: 18px; }
+  .deletion-button:focus-visible { outline: 3px solid var(--color-marigold); outline-offset: 4px; }
+  .deletion-details { margin-top: 18px; padding-top: 21px; border-top: 1px solid var(--color-line); }
+  .deletion-details h2 { margin-bottom: 8px; color: var(--color-coffee); font-size: 2.2rem; }
+  .deletion-details p, .deletion-contact { color: var(--color-chocolate); font-size: 17px; line-height: 1.6; }
+  .deletion-contact a, .deletion-links a { color: var(--color-coffee); text-underline-offset: 4px; overflow-wrap: anywhere; }
+  .deletion-links { display: flex; flex-wrap: wrap; gap: 14px 22px; margin-top: 24px; padding-top: 21px; border-top: 1px solid var(--color-line); }
+  @media (max-width: 640px) {
+    .deletion-page { padding-block: 20px 48px; }
+    .deletion-card { padding: 26px 20px; border-radius: 18px; }
+    .deletion-card > p { font-size: 18px; }
+    .deletion-details p, .deletion-contact { font-size: 16px; }
+  }
+</style>

@@ -105,6 +105,8 @@ address, .phone-block a { max-width: 370px; color: var(--color-chocolate); font-
 .developer-promo-copy > p:not(.developer-kicker) { margin: 0 0 17px; color: #654b43; font-size: 17px; }
 .developer-links { display: flex; flex-wrap: wrap; gap: 10px 22px; }
 .developer-links a { color: var(--color-coffee); font-size: 16px; text-decoration-thickness: 1px; text-underline-offset: 4px; overflow-wrap: anywhere; }
+.footer-legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; padding-top: 2px; }
+.footer-legal a { color: #654b43; font-size: 14px; text-underline-offset: 4px; }
 
 @media (min-width: 1440px) {
   .hero { min-height: 760px; }
@@ -159,6 +161,8 @@ address, .phone-block a { max-width: 370px; color: var(--color-chocolate); font-
   .developer-promo { grid-template-columns: 1fr; gap: 14px; padding: 20px 18px; }
   .developer-promo > img { width: min(100%, 210px); }
   .developer-promo-copy h2 { font-size: 34px; }
+  .footer-legal { justify-content: flex-start; gap: 8px 16px; }
+  .footer-legal a { font-size: 13px; }
 }
 @media (max-width: 370px) {
   .hero-actions { flex-direction: column; align-items: stretch; }
@@ -240,8 +244,8 @@ address, .phone-block a { font-size: 21px; font-weight: 400; }
   .map-frame { aspect-ratio: 4 / 3; }
   .app-inner { grid-template-columns: 1fr; gap: 40px; }
   .app-copy h2 { font-size: clamp(3.3rem, 12vw, 4rem); }
-  .app-gallery { width: min(100%, 500px); gap: 12px; }
-  .app-preview-promotions { transform: translateY(18px); }
+  .app-gallery { width: min(100%, 500px); grid-template-columns: 1fr; gap: 20px; }
+  .app-preview-promotions { transform: none; }
   .footer-inner { gap: 13px 18px; }
 }
 @media (max-width: 370px) {

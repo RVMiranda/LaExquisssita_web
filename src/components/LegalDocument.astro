@@ -1,0 +1,71 @@
+---
+import type { LegalSection } from '../content/legal';
+
+interface Props {
+  title: string;
+  eyebrow: string;
+  introduction: string;
+  sections: readonly LegalSection[];
+}
+
+const { title, eyebrow, introduction, sections } = Astro.props;
+---
+
+<main class="legal-page wrap" aria-labelledby="legal-title">
+  <a class="legal-home wordmark" href="/" aria-label="La Exquisssita, volver al inicio">
+    <span class="wordmark-flower" aria-hidden="true"></span><span>La Exquisssita</span>
+  </a>
+  <article class="legal-document">
+    <header class="legal-header">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1 id="legal-title">{title}</h1>
+      <p class="legal-introduction">{introduction}</p>
+    </header>
+
+    {sections.map((section) => (
+      <section class="legal-section" aria-labelledby={`section-${section.title.split('.')[0].replaceAll(' ', '-')}`}>
+        <h2 id={`section-${section.title.split('.')[0].replaceAll(' ', '-')}`}>{section.title}</h2>
+        {section.paragraphs?.map((paragraph) => <p>{paragraph}</p>)}
+        {section.items && (
+          <ul>
+            {section.items.map((item) => <li>{item}</li>)}
+          </ul>
+        )}
+      </section>
+    ))}
+
+    <nav class="legal-navigation" aria-label="Otros avisos y opciones de privacidad">
+      <a href="/aviso-de-privacidad/">Aviso de privacidad de la app</a>
+      <a href="/terminos-condiciones/">Términos y condiciones</a>
+      <a href="/eliminar-cuenta/">Solicitar eliminación de cuenta</a>
+    </nav>
+    <a class="legal-return" href="/">Volver a La Exquisssita</a>
+  </article>
+</main>
+
+<style>
+  .legal-page { padding-block: 28px 80px; }
+  .legal-home { margin-bottom: clamp(28px, 5vw, 58px); }
+  .legal-document { width: min(100%, 880px); margin-inline: auto; padding: clamp(26px, 6vw, 64px); border: 1px solid rgb(126 57 47 / 13%); border-radius: 24px; background: var(--color-paper); }
+  .legal-header { padding-bottom: 28px; border-bottom: 1px solid var(--color-line); }
+  .legal-header .eyebrow { margin-bottom: 8px; }
+  .legal-header h1 { max-width: none; margin-bottom: 12px; color: var(--color-chocolate); font-size: clamp(2.7rem, 6vw, 4.6rem); letter-spacing: 0; line-height: 1.02; }
+  .legal-introduction { max-width: 680px; margin-bottom: 0; color: #654b43; font-size: 19px; line-height: 1.55; }
+  .legal-section { padding-top: 28px; }
+  .legal-section h2 { margin: 0 0 9px; color: var(--color-coffee); font-size: clamp(1.8rem, 3.5vw, 2.5rem); letter-spacing: 0; line-height: 1.12; }
+  .legal-section p, .legal-section li { color: var(--color-chocolate); font-size: 18px; line-height: 1.65; }
+  .legal-section p { margin: 0 0 12px; }
+  .legal-section ul { display: grid; gap: 8px; margin: 0; padding-left: 23px; }
+  .legal-section li::marker { color: var(--color-coffee); }
+  .legal-navigation { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 42px; padding-top: 24px; border-top: 1px solid var(--color-line); }
+  .legal-navigation a, .legal-return { color: var(--color-coffee); font-size: 16px; text-underline-offset: 4px; }
+  .legal-return { display: inline-block; margin-top: 20px; }
+  @media (max-width: 640px) {
+    .legal-page { padding-block: 20px 48px; }
+    .legal-document { padding: 25px 20px; border-radius: 18px; }
+    .legal-introduction { font-size: 18px; }
+    .legal-section { padding-top: 23px; }
+    .legal-section p, .legal-section li { font-size: 17px; }
+    .legal-navigation { display: grid; justify-items: start; }
+  }
+</style>

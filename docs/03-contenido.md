@@ -12,6 +12,7 @@ Estructura aprobada y teléfono fijo, dirección y horarios confirmados el 4 de 
 | Visita | El sabor te espera. Mapa, dirección y horario | Cómo llegar; llamada |
 | App | H2: Tu próxima visita empieza aquí. Texto: Conoce las novedades y lleva contigo tu tarjeta digital de La Exquisssita. | Conocer la app, solo con destino real |
 | Pie | Nombre del negocio y bloque compacto de promoción de MirandaDevSource con banner y contactos | Datos de contacto comercial permanecen en Visítanos; no mezclar con el desarrollador |
+| Legal app | Términos y condiciones; aviso de privacidad; iniciar solicitud de eliminación de cuenta | Rutas `/terminos-condiciones/`, `/aviso-de-privacidad/`, `/eliminar-cuenta/`; enlaces en pie |
 
 Club: descubrir novedades, consultar tarjeta y presentarla en caja. No anunciar tasas de puntos, regalos específicos o iOS sin confirmar. Hasta tres productos destacados solo si se aprueban nombre, descripción, fotografía, disponibilidad y precio si se publica.
 
@@ -42,7 +43,7 @@ Antes de enlazar app: ficha pública y beneficios anunciables.
 Antes de dominio: propiedad y acceso Cloudflare/DNS.
 Para enriquecer: 3–5 fotos autorizadas de comida servida, fachada y ambiente; redes sociales.
 
-Primera versión sin formularios. No trasladar automáticamente el aviso legal de la app a la web.
+Primera versión sin formularios. No trasladar avisos legales de la app a la web de manera automática; en esta iteración se crearon las páginas por solicitud explícita del usuario y se adaptó privacidad a la implementación observada.
 
 ## Historia y estado editorial
 
@@ -59,6 +60,10 @@ Tipografía en evaluación con el cliente: My Soul para nombre y encabezados; Fo
 ## Footer ampliado — 6 de noviembre de 2026
 
 El pie muestra únicamente el nombre del negocio y una tarjeta compacta que promociona el desarrollo de aplicaciones móviles de MirandaDevSource con banner, WhatsApp y correo. El contacto comercial del restaurante está en «Visítanos» y los datos del desarrollador se mantienen separados.
+
+## Información legal de la app — 16 de noviembre de 2026
+
+Los términos y condiciones de `/terminos-condiciones/` provienen del modal de la app. `/aviso-de-privacidad/` parte de su Aviso de Privacidad y lo adapta a los flujos técnicos observados (Supabase, Google Identity y Firebase Cloud Messaging), con tipos de datos, proveedores y retención al dar de baja una cuenta. `/eliminar-cuenta/` explica la opción en la app y ofrece un inicio de solicitud externo por correo, sin backend. Todo el contenido requiere revisión de la responsable antes de servir como declaración definitiva ante Play Console.
 
 ## Menú actual — 6 de noviembre de 2026
 

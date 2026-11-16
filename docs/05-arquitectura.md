@@ -8,10 +8,15 @@ Contenido público y enlaces: no requiere React, servidor, cuentas, base de dato
 
 - src/pages/index.astro
 - src/pages/verificar-tu-cuenta-socio-laexquisssita.astro
+- src/pages/terminos-condiciones.astro
+- src/pages/aviso-de-privacidad.astro
+- src/pages/eliminar-cuenta.astro
 - src/layouts/BaseLayout.astro
 - src/components/
 - src/components/MenuSection.astro
+- src/components/LegalDocument.astro
 - src/content/business.ts
+- src/content/legal.ts
 - src/content/menu.ts
 - src/styles/tokens.css y global.css
 - src/assets/ para fotos optimizadas
@@ -68,3 +73,5 @@ La combinación tipográfica temporal My Soul + Forum se solicita desde Google F
 El menú es contenido TypeScript tipado y aislado del componente. Usa disclosures HTML nativos con `name` para exclusividad, sin backend, carrito, precios ni lógica de pedido. Un WebP local de Unsplash se usa en el panel de bebidas como fotografía ilustrativa, con su licencia y procedencia en `docs/02-evidencia.md`.
 
 La pantalla para confirmar el correo es mobile-first y usa solo CSS/SVG inline para un check animado; el movimiento se elimina con `prefers-reduced-motion`. Para usarla, registrar su URL exacta como Redirect URL permitida en Supabase. La app Android revisada no pasa `redirectTo` al registrarse; por tanto, Supabase usa el `Site URL` configurado como destino por defecto. Configurar el destino en el template de confirmación/Site URL y probar también recuperación de contraseña y otros correos antes de cambiar un valor global. Esta página muestra el resultado esperado después de que Supabase confirma el correo; no valida la sesión ni el token por sí misma.
+
+Las páginas estáticas de términos, privacidad y solicitud de eliminación usan HTML semántico, contenido tipado y CSS de marca; no incluyen login, formulario ni backend. Antes de usar la política como URL de ficha de Google Play, la responsable debe validar su identidad, las declaraciones de datos, proveedores y retención; la ruta de eliminación abre el correo para iniciar una solicitud externa.

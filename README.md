@@ -1,6 +1,6 @@
 # La Exquisssita — web
 
-Actualizado: 6 de noviembre de 2026. La landing, el menú interactivo y la ruta `/verificar-tu-cuenta-socio-laexquisssita/` están en la rama `dev` para revisión. La ruta de confirmación es estática y debe añadirse a la configuración de redirecciones de Supabase cuando exista una URL pública estable. Se mantienen pendientes las fotos autorizadas de alimentos, ficha pública de la app, redes, evaluación tipográfica final y propiedad del dominio. No se ha desplegado.
+Actualizado: 16 de noviembre de 2026. La landing, menú interactivo, confirmación de cuenta y páginas legales de la app están en la rama `dev` para revisión. Rutas: `/terminos-condiciones/`, `/aviso-de-privacidad/` y `/eliminar-cuenta/`. Antes de usar en Play Console, la responsable debe validar los textos, y actualizar las URLs públicas de privacidad/eliminación y el formulario Data Safety al dominio HTTPS final. No se ha desplegado.
 
 Una bienvenida digital para conocer las carnitas del negocio en Ocosingo, planear la visita, consultar un pedido para llevar y conocer la app.
 

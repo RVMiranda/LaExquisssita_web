@@ -47,7 +47,7 @@ test('explores menu categories through native keyboard-friendly disclosures', as
   await page.keyboard.press('Enter');
   await expect(categories.nth(1)).toHaveAttribute('open', '');
   await expect(categories.nth(0)).not.toHaveAttribute('open', '');
-  await expect(page.getByText('¾ kg', { exact: true })).toBeVisible();
+  await expect(page.getByText('¾ kg', { exact: true }).first()).toBeVisible();
   await expect(page.getByText('También puedes pedir por importe; por ejemplo, $100.')).toBeVisible();
 
   await categories.nth(3).locator('summary').click();
@@ -56,7 +56,7 @@ test('explores menu categories through native keyboard-friendly disclosures', as
   await expect(page.getByAltText(/imagen ilustrativa, no tomada en La Exquisssita/)).toBeVisible();
 });
 
-test('uses the requested typography and details the app features conceptually', async ({ page }) => {
+test('uses the requested typography and shows app screenshots as demonstrations', async ({ page }) => {
   const fonts = await page.evaluate(() => ({
     body: getComputedStyle(document.body).fontFamily,
     title: getComputedStyle(document.querySelector('h1')!).fontFamily,
@@ -64,10 +64,35 @@ test('uses the requested typography and details the app features conceptually', 
   expect(fonts.body).toContain('Forum');
   expect(fonts.title).toContain('My Soul');
 
-  await expect(page.getByText('Tarjeta digital', { exact: true }).first()).toBeVisible();
-  await expect(page.getByText('Novedades', { exact: true }).first()).toBeVisible();
-  await expect(page.locator('.app-preview figcaption'))
-    .toContainText('no es una captura ni especificación de la app real');
+  await expect(page.locator('.app-preview img')).toHaveCount(2);
+  await expect(page.getByAltText(/Vista de inicio de la app La Exquisssita/)).toHaveAttribute('src', '/app-preview/inicio-pixel-10-pro.png');
+  await expect(page.getByAltText(/Vista de promociones de la app La Exquisssita/)).toHaveAttribute('src', '/app-preview/promociones-pixel-10-pro.png');
+  await expect(page.getByText('Estas capturas son únicamente demostrativas.')).toBeVisible();
+});
+
+test('links to the app legal pages and the external account-deletion resource from the footer', async ({ page }) => {
+  await expect(page.getByRole('link', { name: 'Aviso de privacidad de la app' })).toHaveAttribute('href', '/aviso-de-privacidad/');
+  await expect(page.getByRole('link', { name: 'Términos y condiciones' })).toHaveAttribute('href', '/terminos-condiciones/');
+  await expect(page.getByRole('link', { name: 'Solicitar eliminación de cuenta' })).toHaveAttribute('href', '/eliminar-cuenta/');
+});
+
+test('publishes app terms, privacy providers and data-deletion details on separate routes', async ({ page }) => {
+  await page.goto('/terminos-condiciones/');
+  await expect(page.locator('main h1')).toHaveText('Términos y condiciones');
+  await expect(page.getByRole('heading', { name: '11. Distribución y actualizaciones' })).toBeVisible();
+  await expect(page.getByText(/exactamente 10 puntos por cada visita válida/)).toBeVisible();
+
+  await page.goto('/aviso-de-privacidad/');
+  await expect(page.locator('main h1')).toHaveText('Aviso de privacidad');
+  await expect(page.getByText(/Supabase interviene en autenticación/)).toBeVisible();
+  await expect(page.getByText(/Firebase Cloud Messaging/)).toBeVisible();
+  await expect(page.getByText(/HMAC del correo normalizado/)).toBeVisible();
+
+  await page.goto('/eliminar-cuenta/');
+  await expect(page.locator('main h1')).toHaveText('Solicitar eliminación de cuenta');
+  await expect(page.getByRole('link', { name: /Solicitar eliminación por correo/ }))
+    .toHaveAttribute('href', /^mailto:carnitaslaexquisssita@gmail\.com\?/);
+  await expect(page.getByText(/Ajustes > Eliminar mi cuenta/)).toBeVisible();
 });
 
 for (const width of [320, 390, 768, 1440]) {
@@ -126,3 +151,18 @@ test('confirms the account on its dedicated mobile-first page', async ({ page })
   await page.emulateMedia({ reducedMotion: 'reduce' });
   expect(await page.locator('.seal-check').evaluate((el) => getComputedStyle(el).animationName)).toBe('none');
 });
+
+for (const route of ['/terminos-condiciones/', '/aviso-de-privacidad/', '/eliminar-cuenta/']) {
+  for (const width of [320, 390, 768, 1440]) {
+    test(`keeps ${route} usable at ${width}px without horizontal overflow`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await page.goto(route);
+      await expect(page.locator('main h1')).toBeVisible();
+      const dimensions = await page.evaluate(() => ({
+        viewport: document.documentElement.clientWidth,
+        page: document.documentElement.scrollWidth,
+      }));
+      expect(dimensions.page).toBeLessThanOrEqual(dimensions.viewport);
+    });
+  }
+}

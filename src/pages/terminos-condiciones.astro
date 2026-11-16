@@ -1,0 +1,17 @@
+---
+import LegalDocument from '../components/LegalDocument.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { termsAndConditions } from '../content/legal';
+---
+
+<BaseLayout
+  title="Términos y condiciones | La Exquisssita"
+  description="Términos de uso de la app y del Club de Recompensas de La Exquisssita."
+>
+  <LegalDocument
+    title="Términos y condiciones"
+    eyebrow="App de socios · Club de Recompensas"
+    introduction="Estos términos regulan el uso de la aplicación móvil La Exquisssita y la participación en su Club de Recompensas."
+    sections={termsAndConditions}
+  />
+</BaseLayout>
