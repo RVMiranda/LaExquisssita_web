@@ -9,9 +9,12 @@ Propuesta respaldada por cliente/manager, supuestos separados, assets originales
 - Hero, Quiénes somos, Nuestra historia, Carnitas y visita y app, sin ficción presentada como realidad. La historia tiene datos confirmados; la landing aún requiere revisión de copy y materiales pendientes.
 - Datos confirmados; probar WhatsApp, llamada y Maps. No existe enlace público confirmado de la tienda.
 - En Visítanos, el pin de Maps confirmado abre en una pestaña nueva y el mapa corresponde al mismo lugar; documentar que depende de Google Maps externo.
-- La vista conceptual de app identifica sus elementos y medidas aproximadas, y no se presenta como captura real.
+- La sección de app muestra capturas reales de la app dentro de marcos Android y un aviso visible de que son demostrativas; no afirma que los datos o promociones sigan vigentes.
 - Menú fiel a la lista confirmada, sin precios inventados ni carrito; sus categorías operan por teclado y se ajustan a móvil.
 - Ruta `/verificar-tu-cuenta-socio-laexquisssita/` estática, no indexable, con confirmación de cuenta y beneficios que coinciden con la app; animación breve con soporte de movimiento reducido y layout móvil sin overflow.
+- Términos y privacidad en rutas públicas separadas, con nombre de app, datos tratados, propósitos, proveedores técnicos observados, seguridad y baja; no prometer retención o seguridad no documentadas.
+- Footer enlaza términos, aviso de privacidad y solicitud de eliminación; página externa explica la baja dentro de la app y ofrece el canal de solicitud fuera de ella.
+- Antes de Play Console: revisar contenido legal con la responsable, configurar URLs públicas estables de política de privacidad y eliminación, y alinear Data Safety con app, SDKs y proveedores. Términos no sustituyen a la política.
 - Configurar y probar la URL posterior a la confirmación en Supabase. La página presupone que Supabase terminó la verificación; no valida tokens ni autentica usuarios.
 - Diferenciar teléfono fijo `919 673 2035` de WhatsApp `+52 919 133 0424`.
 - Toda fotografía de stock debe tener licencia y fuente; las fotos de alimentos del local deben ser autorizadas por el cliente.

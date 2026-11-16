@@ -53,3 +53,14 @@ Actualizados alcance, confirmaciones comerciales, diseño, aceptación y continu
 - El copy resume tarjeta de socio, visitas/puntos y novedades/recompensas, contrastado con la app Android. No se presentan promociones específicas ni acceso automático como hechos.
 - La app Android actual no especifica `redirectTo` en el registro. La ruta necesita URL pública y allow-list/configuración en Supabase; ese redirect no se configuró ni probó con correo real. La página solo presenta el éxito posterior a la verificación y no valida token, sesión o errores de autenticación.
 - No se cambió Supabase, Android ni manager y no hubo despliegue.
+
+## Páginas legales — 16 de noviembre de 2026
+
+- Revisión de código Android, sin ejecutar ni modificar las apps: términos y aviso en `LegalDialog.kt`; registro con email/Google y teléfono opcional; manifiesto con Internet/notificaciones; Supabase para autenticación/datos; Firebase Cloud Messaging registra token y modelo de dispositivo.
+- La página de privacidad se adaptó para describir esos proveedores y los datos observados. El modal de la app decía que los datos nunca se transfieren a terceros, afirmación que no coincide con esos flujos técnicos.
+- La documentación de baja indica anonimización, revocación de QR/sesiones y HMAC del correo en lista restringida para bloquear re-registros; no se encontró plazo de expiración documentado. Se refleja en el texto y queda pendiente confirmación de la responsable.
+- `npm run check`: 0 errores, 0 warnings, 0 hints (19 archivos).
+- `npm run build`: completado; generó `/`, `/terminos-condiciones/`, `/aviso-de-privacidad/`, `/eliminar-cuenta/` y `/verificar-tu-cuenta-socio-laexquisssita/`.
+- Verificación manual de salida: rutas y enlaces legales del footer presentes en `dist/`; canal externo de baja usa `mailto`, sin formulario ni backend.
+- `npm test -- --workers=1 --reporter=line`: 25 pruebas Playwright aprobadas; verifica contenido legal, enlaces del footer, `mailto`, viewport 320/390/768/1440 px y ausencia de overflow horizontal.
+- Revisión visual manual del aviso de privacidad en CUA a 390 px y en el viewport amplio del navegador: tipografía, jerarquía, legibilidad y tarjeta legal. Las pruebas Playwright cubren además 320/390/768/1440 px; no se hizo captura dedicada ni auditoría Lighthouse. No se publicó ni se configuró URL de Play Console. La responsable debe revisar la exactitud legal y completar Data Safety antes de usar las URLs definitivas en Play.

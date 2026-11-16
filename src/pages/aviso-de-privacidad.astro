@@ -1,0 +1,17 @@
+---
+import LegalDocument from '../components/LegalDocument.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { privacyNotice } from '../content/legal';
+---
+
+<BaseLayout
+  title="Aviso de privacidad de la app | La Exquisssita"
+  description="Conoce qué datos trata la app La Exquisssita, para qué se usan, los servicios que intervienen y cómo solicitar su acceso, corrección o eliminación."
+>
+  <LegalDocument
+    title="Aviso de privacidad"
+    eyebrow="La Exquisssita · App de socios"
+    introduction="Este aviso describe el tratamiento de datos personales asociado a la cuenta y al Club de Lealtad de la aplicación móvil."
+    sections={privacyNotice}
+  />
+</BaseLayout>
